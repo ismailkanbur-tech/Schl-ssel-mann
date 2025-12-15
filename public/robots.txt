@@ -1,0 +1,13 @@
+# public/robots.txt
+
+# Tüm botlar için genel kurallar
+User-agent: *
+# Tüm siteyi taramalarına izin ver
+Allow: /
+
+# Kritik/Hassas sayfaların taranmasını engelle (gerekiyorsa)
+# Disallow: /admin
+# Disallow: /login
+
+# Sitenizin XML Sitemap dosyasının nerede olduğunu belirtin
+Sitemap: https://www.ihredomain.de/sitemap.xml

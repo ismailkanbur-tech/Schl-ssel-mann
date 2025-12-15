@@ -10,23 +10,24 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Schlüsselmann - Ihr 24/7 Autoschlüsseldienst",
+  title: "Ka Service - Ihr 24/7 Autoschlüsseldienst",
   description:
     "24h Notdienst für Auto- und Türöffnung. Schnelle, transparente und professionelle Hilfe in München, Dachau und Augsburg.",
   keywords: [
     "Schlüsseldienst München",
     "Schlüsseldienst Dachau",
+    "Schlüsseldienst Freising",
     "Autoschlüssel Notdienst",
     "Türöffnung 24h",
     "Festpreis Schlüsseldienst",
   ],
-  authors: [{ name: "Schlüsselmann" }],
+  authors: [{ name: "Ka Service Schlüsseldients" }],
   openGraph: {
-    title: "Schlüsselmann - Ihr 24/7 Autoschlüsseldienst",
+    title: "Ka Service Schlüsseldients - Ihr 24/7 Autoschlüsseldienst",
     description:
       "Ihr lokaler Schlüsselnotdienst für München, Dachau und Augsburg. Schnelle Hilfe, transparente Festpreise.",
-    url: "https://www.schluesselmann.de",
-    siteName: "Schlüsselmann",
+    url: "https://xn--autoschlsselmann-qzb.de/",
+    siteName: "Schlüsseldienst Ka Service",
     locale: "de_DE",
     type: "website",
   },

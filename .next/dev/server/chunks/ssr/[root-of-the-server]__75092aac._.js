@@ -368,7 +368,7 @@ __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$c
 "[project]/src/components/PriceTeaserSection.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/components/PriceTeaserSection.tsx - Dikey Hizalama ve Eşit Yükseklik Düzeltildi
+// src/components/PriceTeaserSection.tsx - Metin Taşkınlarını ve Dengesiz Kart Boyutlarını Düzelten Revizyon
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
@@ -382,39 +382,47 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-// Ana Hizmetler ve Başlangıç Fiyatları
+// Renk Sabitleri
+const PRIMARY_TEXT_COLOR = 'text-blue-600';
+const CTA_BG_COLOR = 'bg-gray-900';
+const CTA_HOVER_COLOR = 'hover:bg-blue-600';
+// Ana Hizmetler ve Başlangıç Fiyatları (Renkler korundu)
 const services = [
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$LockClosedIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LockClosedIcon$3e$__["LockClosedIcon"],
         title: "Türöffnung (zugezogen)",
         price: "ab 49,90 €",
-        desc: "Schnelle und beschädigungsfreie Notöffnung. Nur zugezogene Türen.",
+        // Açıklama metni uzatıldı
+        desc: "Ihre Tür ist zugefallen, der Schlüssel steckt innen oder Sie haben ihn vergessen? Wir bieten schnelle, schadenfreie und kostengünstige Notöffnung mit unserer garantierten Festpreisstrategie.",
         link: "/leistungen#tuer",
-        color: "text-blue-500"
+        iconClass: "text-blue-600"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$KeyIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__KeyIcon$3e$__["KeyIcon"],
-        title: "Schlüssel nachmachen",
+        title: "Schlüssel nachmachen ",
         price: "ab 19,90 €",
-        desc: "Kopieren von Standard-Zylinder- und Haustürschlüsseln.",
+        // Açıklama metni uzatıldı
+        desc: "Präzises Kopieren von Standard-Zylinder-, Haus- und Briefkastenschlüsseln. Auch Auto-Transponder Schlüssel duplizieren wir schnell vor Ort.",
         link: "/leistungen#schluessel",
-        color: "text-teal-500"
+        iconClass: "text-teal-600"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$TruckIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__TruckIcon$3e$__["TruckIcon"],
-        title: "Auto Schlüssel kopieren",
+        title: "Auto Schlüssel Duplikat",
         price: "ab 49,90 €",
-        desc: "Duplizierung von Autoschlüsseln (Transponder/Wegfahrsperre) vor Ort.",
+        // Açıklama metni uzatıldı
+        desc: "Duplizierung und Reparatur von Autoschlüsseln (Transponder & Wegfahrsperre) für fast alle Marken, direkt bei Ihnen vor Ort ohne lange Wartezeiten.",
         link: "/leistungen#auto",
-        color: "text-amber-500"
+        iconClass: "text-amber-600"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$LinkIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LinkIcon$3e$__["LinkIcon"],
-        title: "Auto Schlüssel programmieren",
-        price: "ab 79,90 €",
-        desc: "Programmierung von Funkfernbedienungen und neuen Schlüsseln.",
-        link: "/leistungen#auto",
-        color: "text-purple-500"
+        title: "Schließanlagen ",
+        price: "auf Anfrage",
+        // Açıklama metni uzatıldı
+        desc: "Wir beraten, planen und montieren moderne Schließanlagen, Sicherheitszylinder und Einbruchschutzmaßnahmen für maximale Sicherheit in Ihrem Zuhause.",
+        link: "/leistungen#sicherheit",
+        iconClass: "text-red-600"
     }
 ];
 const PriceTeaserSection = ()=>{
@@ -424,114 +432,131 @@ const PriceTeaserSection = ()=>{
             className: "container mx-auto px-4",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10",
-                    children: "Unsere Top-Leistungen im Überblick"
+                    className: "text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-4",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: PRIMARY_TEXT_COLOR,
+                            children: "Transparente Festpreise"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/PriceTeaserSection.tsx",
+                            lineNumber: 57,
+                            columnNumber: 21
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        " für unsere Top-Leistungen"
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/PriceTeaserSection.tsx",
+                    lineNumber: 56,
+                    columnNumber: 17
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12",
+                    children: "Wir bieten schnelle Soforthilfe in München, Dachau & Freising mit klaren Startpreisen."
                 }, void 0, false, {
                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                    lineNumber: 46,
+                    lineNumber: 59,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
                     children: services.map((service, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                             href: service.link,
-                            // Kartın kendisi flex container oldu
-                            className: "block p-6 rounded-xl bg-white border-2 border-gray-100 shadow-xl transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:border-blue-400 flex flex-col min-h-[280px]",
+                            className: "group block p-6 rounded-2xl bg-gradient-to-br from-white to-gray-50 border-2 border-gray-100 shadow-lg transition duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:border-blue-600 flex flex-col min-h-[320px]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center space-x-4 mb-3",
+                                    className: "flex items-start space-x-4 mb-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(service.icon, {
-                                            className: `h-8 w-8 ${service.color}`
+                                            className: `h-8 w-8 ${service.iconClass} flex-shrink-0`
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 73,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-extrabold text-gray-900 leading-tight",
+                                            className: "text-xl font-extrabold text-gray-900 leading-snug",
                                             children: service.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 74,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 72,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-4xl font-black text-blue-600 mb-3 leading-none",
+                                    className: `text-4xl font-black ${PRIMARY_TEXT_COLOR} mb-4 leading-none`,
                                     children: service.price
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                    lineNumber: 66,
+                                    lineNumber: 80,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-sm text-gray-600 leading-relaxed mb-4 flex-grow",
+                                    className: "text-base text-gray-700 leading-relaxed mb-4 flex-grow",
                                     children: service.desc
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 85,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-sm font-semibold text-blue-600 hover:underline flex items-center mt-auto",
-                                    children: "Mehr Details erfahren →"
+                                    className: `text-sm font-bold ${PRIMARY_TEXT_COLOR} hover:underline flex items-center mt-auto transition duration-200`,
+                                    children: "Alle Details zur Leistung →"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                                    lineNumber: 76,
+                                    lineNumber: 90,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                            lineNumber: 53,
+                            lineNumber: 66,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                    lineNumber: 51,
+                    lineNumber: 64,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center mt-12",
+                    className: "text-center mt-14",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-lg text-gray-700 font-medium mb-4",
-                            children: "Sie benötigen eine andere Leistung? Alle unsere Services finden Sie hier."
+                            children: "Brauchen Sie sofort Hilfe oder haben Sie Fragen zu den Preisen? Rufen Sie uns direkt an!"
                         }, void 0, false, {
                             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                            lineNumber: 85,
+                            lineNumber: 99,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                             href: "/leistungen",
-                            className: "inline-flex items-center px-8 py-3 bg-gray-900 text-white font-bold rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300",
-                            children: "Alle Leistungen anzeigen"
+                            className: `inline-flex items-center px-10 py-4 ${CTA_BG_COLOR} text-white font-bold rounded-full shadow-lg ${CTA_HOVER_COLOR} transition-colors duration-300 uppercase tracking-wider text-lg`,
+                            children: "Alle Schlüssel-Services im Detail ansehen"
                         }, void 0, false, {
                             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                            lineNumber: 88,
+                            lineNumber: 102,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/PriceTeaserSection.tsx",
-                    lineNumber: 84,
+                    lineNumber: 98,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/PriceTeaserSection.tsx",
-            lineNumber: 45,
+            lineNumber: 54,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/PriceTeaserSection.tsx",
-        lineNumber: 44,
+        lineNumber: 53,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -762,13 +787,13 @@ function HomePage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                         className: "font-semibold text-white",
-                                        children: "15–30 Minuten schnelle Anfahrt."
+                                        children: "„15–30 Min. Schlüsselhilfe sofort!“"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
                                         lineNumber: 150,
                                         columnNumber: 25
                                     }, this),
-                                    " Türöffnung und Fahrzeugschlüssel-Service.“"
+                                    " Tür & Auto!“"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/page.tsx",

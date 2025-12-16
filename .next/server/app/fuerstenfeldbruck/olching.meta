@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[citySlug]/layout,_N_T_/[citySlug]/[townSlug]/layout,_N_T_/[citySlug]/[townSlug]/page,_N_T_/fuerstenfeldbruck/olching"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$citySlug/$d$townSlug/__PAGE__",
+    "/$d$citySlug/$d$townSlug",
+    "/$d$citySlug",
+    "/_index",
+    "/_head"
+  ]
+}

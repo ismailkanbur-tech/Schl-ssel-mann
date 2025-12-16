@@ -147,7 +147,7 @@ export default function HomePage() {
                     </h1>
                     
                     <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
-                        <strong className="font-semibold text-white">15–30 Minuten schnelle Anfahrt.</strong> Türöffnung und Fahrzeugschlüssel-Service.“
+                        <strong className="font-semibold text-white">„15–30 Min. Schlüsselhilfe sofort!“</strong> Tür & Auto!“
                     </p>
                     
                     {/* Ana CTA (Kırmızı ve Acil) */}

@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/muenchen":{},"/dachau":{},"/freising":{},"/fuerstenfeldbruck":{},"/muenchen/muenchen-city":{},"/muenchen/pasing":{},"/muenchen/sendling":{},"/muenchen/schwabing":{},"/muenchen/haidhausen":{},"/muenchen/neuhausen":{},"/muenchen/garching":{},"/muenchen/unterfoehring":{},"/muenchen/frankfurt-strasse":{},"/muenchen/moosach":{},"/muenchen/ramersdorf":{},"/muenchen/hasenbergl":{},"/dachau/dachau-stadt":{},"/dachau/markt-indersdorf":{},"/dachau/karlsfeld":{},"/dachau/altomuenster":{},"/dachau/bergkirchen":{},"/dachau/schwabhausen":{},"/dachau/pauli-heim":{},"/dachau/puchheim":{},"/dachau/olching":{},"/dachau/groebenzell":{},"/dachau/hebertshausen":{},"/dachau/rohrbach":{},"/dachau/weichs":{},"/dachau/vierkirchen":{},"/freising/freising-stadt":{},"/freising/moosburg":{},"/freising/hallbergmoos":{},"/freising/neufahrn":{},"/fuerstenfeldbruck/fuerstenfeldbruck-stadt":{},"/fuerstenfeldbruck/olching":{},"/fuerstenfeldbruck/groebenzell":{},"/fuerstenfeldbruck/maisach":{}},"dynamicRoutes":{"/[citySlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[citySlug]/[townSlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]/[townSlug]","routeRegex":"^\\/([^/]+?)\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"02a0e11b335a8fd0cf18817399ef8ac6","previewModeSigningKey":"7d70f9743aa220fe1b4a2878770920436ea7074f0aa5358c0e30ec3a2dd42a07","previewModeEncryptionKey":"7044b4faec2dfed24f39980cb169e34df4dd3772ef3adb49ad42e25832753ac7"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "3e05c3fc2756a46c48f2b3a6c2efa60f",
+    "previewModeSigningKey": "9dba3ec228edf15a72445b90b1d38f52a61ef66e8b3d60816ef6c33911ca302f",
+    "previewModeEncryptionKey": "a139382b8952bc35f86ead9fa7c63ed16baa54f69e5712e72a1f2758ba4fa5b0"
+  }
+}

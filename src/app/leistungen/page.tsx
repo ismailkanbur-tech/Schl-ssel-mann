@@ -1,6 +1,13 @@
 // src/app/leistungen/page.tsx
 import { Metadata } from 'next';
-import { KeyIcon, TruckIcon, LockOpenIcon, BoltIcon, CurrencyEuroIcon, ShieldExclamationIcon } from '@heroicons/react/24/outline';
+import { 
+    KeyIcon, 
+    LockOpenIcon, 
+    ShieldExclamationIcon, 
+    CurrencyEuroIcon, 
+    BoltIcon,
+    PhoneIcon, 
+} from '@heroicons/react/24/outline'; 
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -8,95 +15,126 @@ export const metadata: Metadata = {
     description: 'Umfassende Leistungen vom Schlüsselmann: Professionelle Türöffnung, Auto Schlüssel nachmachen, Einbruchschutz und 24/7 Notdienst mit Festpreisgarantie in Ihrer Region.',
 };
 
+// Hizmet Verileri (Aynı kalıyor)
+const services = [
+    {
+        icon: LockOpenIcon,
+        title: 'Klassische Türöffnung (Haustüren & Wohnungen)',
+        color: 'text-sky-600',
+        description: 'Sie haben sich ausgesperrt? Unser 24/7 Notdienst sorgt für eine **schnelle und schadenfreie Türöffnung**. Dank Spezialwerkzeug vermeiden wir unnötige Beschädigungen an Schloss und Zylinder. Wir sind in 15-30 Minuten bei Ihnen vor Ort.',
+        features: [
+            'Schadenfreie Öffnung zu 99%', 
+            'Transparente Festpreise', 
+            'Öffnung von zugefallenen oder verschlossenen Türen'
+        ],
+    },
+    {
+        icon: KeyIcon,
+        title: 'Auto Schlüssel nachmachen und Programmieren',
+        color: 'text-orange-600',
+        description: 'Wir sind Spezialisten für moderne Auto Schlüssel. Egal ob verloren, defekt oder benötigen Sie einen Ersatzschlüssel – wir fräsen und programmieren den Schlüssel direkt vor Ort für die meisten gängigen Marken (BMW, Mercedes, VW, Audi, etc.).',
+        features: [
+            'Sofortige Programmierung vor Ort', 
+            'Bis zu 70% günstiger als Vertragshändler', 
+            'Ersatzschlüssel und Reparatur defekter Schlüsselgehäuse'
+        ],
+    },
+    {
+        icon: ShieldExclamationIcon,
+        title: 'Einbruchschutz und Sicherheitsberatung',
+        color: 'text-green-600',
+        description: 'Nach einem Einbruchsversuch oder zur Prävention: Wir beraten Sie zu aktuellen Sicherheitsstandards, tauschen beschädigte Schlösser aus und installieren moderne Schließanlagen und Sicherheitstechnik (Zusatzschlösser, Panzerriegel).',
+        features: [
+            'Kostenlose Sicherheitsberatung', 
+            'Installation von VdS-anerkannten Sicherheitssystemen', 
+            '24/7 Notabsicherung nach Einbruch'
+        ],
+    },
+];
+
 const LeistungenPage: React.FC = () => {
+    const NOTDIENST_TELEFON = '0177 3977646'; 
+
     return (
         <main className="container mx-auto px-4 py-12 md:py-20">
             <header className="text-center mb-16">
                 <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-                    Umfassende <span className="text-blue-600">Leistungen</span>
+                    Umfassende <span className="text-sky-600">Leistungen</span>
                 </h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                     Wir bieten schnelle und professionelle Lösungen für jeden Schlüsselnotfall – von der klassischen Türöffnung bis zum modernen Autoschlüssel-Service.
                 </p>
             </header>
 
-            {/* 1. Hauptleistungen (Ana Hizmetler) */}
-            <section className="mb-16">
-                <h2 className="text-3xl font-bold text-gray-800 mb-8 border-b pb-3">
-                    Unsere Kernkompetenzen
+            {/* 1. Hauptleistungen (Ana Hizmetler) - Izgara Düzeni */}
+            <section className="mb-20">
+                <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+                    Unsere Kernkompetenzen im Überblick
                 </h2>
-                <div className="space-y-12">
-                    
-                    {/* Hizmet 1: Türöffnung (Door Opening) */}
-                    <div className="flex flex-col md:flex-row bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                        <LockOpenIcon className="h-12 w-12 text-blue-600 mr-6 flex-shrink-0 mb-4 md:mb-0" />
-                        <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
-                                Klassische Türöffnung (Haustüren & Wohnungen)
+                
+                {/* Modern 3-sütunlu ızgara */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {services.map((service, index) => (
+                        <div 
+                            key={index} 
+                            // Flexbox Sınıfları Eklendi: Kartı dikey flex container yapar
+                            className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-transparent hover:border-sky-500 transform hover:scale-[1.02] transition duration-500 ease-in-out flex flex-col h-full"
+                        >
+                            <service.icon className={`h-16 w-16 ${service.color} mb-6`} />
+                            
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                {service.title}
                             </h3>
-                            <p className="text-gray-700 mb-4">
-                                Sie haben sich ausgesperrt? Unser 24/7 Notdienst sorgt für eine **schnelle und schadenfreie Türöffnung**. Dank Spezialwerkzeug vermeiden wir unnötige Beschädigungen an Schloss und Zylinder. Wir sind in 15-30 Minuten bei Ihnen vor Ort.
+                            
+                            {/* Flex-grow sınıfı, bu paragrafın boşluğu doldurarak kartın yüksekliğini eşitlemesini sağlar */}
+                            <p className="text-gray-700 mb-6 flex-grow">
+                                {service.description}
                             </p>
-                            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                                <li>Schadenfreie Öffnung zu 99%</li>
-                                <li>Transparente Festpreise</li>
-                                <li>Öffnung von zugefallenen oder verschlossenen Türen</li>
+                            
+                            <ul className="space-y-2 mb-6">
+                                {service.features.map((feature, i) => (
+                                    <li key={i} className="flex items-start text-gray-600">
+                                        {/* İkonu ilgili hizmet rengiyle değiştirdim. */}
+                                        <LockOpenIcon className={`h-4 w-4 mr-2 mt-1 ${service.color} flex-shrink-0`} /> 
+                                        <span className="text-sm">{feature}</span>
+                                    </li>
+                                ))}
                             </ul>
-                        </div>
-                    </div>
 
-                    {/* Hizmet 2: Auto Schlüssel Service (Car Key Service) */}
-                    <div className="flex flex-col md:flex-row bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                        <KeyIcon className="h-12 w-12 text-red-600 mr-6 flex-shrink-0 mb-4 md:mb-0" />
-                        <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                Auto Schlüssel nachmachen und Programmieren
-                            </h3>
-                            <p className="text-gray-700 mb-4">
-                                Wir sind Spezialisten für moderne Auto Schlüssel. Egal ob verloren, defekt oder benötigen Sie einen Ersatzschlüssel – wir fräsen und programmieren den Schlüssel direkt vor Ort für die meisten gängigen Marken (BMW, Mercedes, VW, Audi, etc.).
-                            </p>
-                            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                                <li>Sofortige Programmierung vor Ort</li>
-                                <li>Bis zu 70% günstiger als Vertragshändler</li>
-                                <li>Ersatzschlüssel und Reparatur defekter Schlüsselgehäuse</li>
-                            </ul>
+                            {/* CTA'nın hep en altta kalması garanti edilir */}
+                            <Link 
+                                href={`tel:${NOTDIENST_TELEFON}`} 
+                                className={`text-md font-semibold flex items-center ${service.color} hover:text-sky-700 transition mt-auto`} // mt-auto eklenerek en alta itilir
+                            >
+                                <PhoneIcon className="h-5 w-5 mr-2" />
+                                Jetzt Soforthilfe anfordern
+                            </Link>
                         </div>
-                    </div>
-
-                    {/* Hizmet 3: Einbruchschutz (Security) */}
-                    <div className="flex flex-col md:flex-row bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                        <ShieldExclamationIcon className="h-12 w-12 text-green-600 mr-6 flex-shrink-0 mb-4 md:mb-0" />
-                        <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                Einbruchschutz und Sicherheitsberatung
-                            </h3>
-                            <p className="text-gray-700 mb-4">
-                                Nach einem Einbruchsversuch oder zur Prävention: Wir beraten Sie zu aktuellen Sicherheitsstandards, tauschen beschädigte Schlösser aus und installieren moderne Schließanlagen und Sicherheitstechnik (Zusatzschlösser, Panzerriegel).
-                            </p>
-                            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                                <li>Kostenlose Sicherheitsberatung</li>
-                                <li>Installation von VdS-anerkannten Sicherheitssystemen</li>
-                                <li>24/7 Notabsicherung nach Einbruch</li>
-                            </ul>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
             
-            {/* 2. Preisversprechen ve Acil Durum CTA */}
-            <section className="bg-blue-100 p-8 rounded-xl text-center mb-16 shadow-inner">
-                <CurrencyEuroIcon className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <h2 className="text-3xl font-bold text-blue-800 mb-4">
-                    Unser Festpreis-Versprechen
+            {/* 2. Preisversprechen ve Acil Durum CTA - Daha Dinamik Tasarım */}
+            <section className="bg-gradient-to-r from-sky-600 to-blue-700 p-10 rounded-2xl text-white text-center shadow-2xl relative overflow-hidden">
+                {/* Arka plan deseni / süsleme */}
+                <div className="absolute inset-0 opacity-10">
+                    <BoltIcon className="h-full w-full" />
+                </div>
+                
+                <CurrencyEuroIcon className="h-16 w-16 text-yellow-300 mx-auto mb-4 relative z-10" />
+                <h2 className="text-4xl font-extrabold mb-3 relative z-10">
+                    Ihr Vorteil: Das <span className="text-yellow-300">Festpreis-Versprechen</span>
                 </h2>
-                <p className="text-lg text-blue-700 max-w-4xl mx-auto mb-6">
-                    Bei uns gibt es keine bösen Überraschungen. Wir nennen Ihnen den **genauen Endpreis** telefonisch, bevor unser Techniker losfährt. Dies gilt für alle gängigen Türöffnungen und Auto Schlüssel Services.
+                <p className="text-lg font-light max-w-4xl mx-auto mb-8 relative z-10">
+                    Keine versteckten Kosten, keine bösen Überraschungen. Wir nennen Ihnen den **genauen Endpreis** telefonisch, bevor unser Techniker losfährt. 100% transparent.
                 </p>
+                
                 <Link 
-                    href={`tel:089-111111`} 
-                    className="inline-flex items-center px-8 py-3 text-xl bg-red-600 text-white font-bold rounded-full shadow-lg transition duration-300 hover:bg-red-700 hover:scale-105"
+                    href={`tel:${NOTDIENST_TELEFON}`} 
+                    className="inline-flex items-center px-10 py-4 text-2xl bg-orange-500 text-white font-black rounded-full shadow-2xl transition duration-300 transform hover:bg-orange-600 hover:scale-105 uppercase tracking-wider relative z-10 animate-bounce-slow"
                 >
-                    <BoltIcon className="h-5 w-5 mr-3" /> Jetzt Notruf tätigen: 089-111111
+                    <PhoneIcon className="h-6 w-6 mr-3" /> 
+                    Jetzt 24/7 Notruf: {NOTDIENST_TELEFON}
                 </Link>
             </section>
         </main>

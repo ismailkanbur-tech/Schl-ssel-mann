@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "Schlüsseldienst München",
     "Schlüsseldienst Dachau",
     "Schlüsseldienst Freising",
+    "Schlüsseldienst Fürstenfeldbruck",
     "Autoschlüssel Notdienst",
     "Türöffnung 24h",
     "Festpreis Schlüsseldienst",

@@ -27,6 +27,15 @@ __turbopack_context__.s([
     "getArticleContentBySlug",
     ()=>getArticleContentBySlug
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$KeyIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__KeyIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/KeyIcon.js [app-rsc] (ecmascript) <export default as KeyIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$LockClosedIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LockClosedIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/LockClosedIcon.js [app-rsc] (ecmascript) <export default as LockClosedIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$CogIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__CogIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/CogIcon.js [app-rsc] (ecmascript) <export default as CogIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$EnvelopeIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__EnvelopeIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/EnvelopeIcon.js [app-rsc] (ecmascript) <export default as EnvelopeIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$ShieldCheckIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheckIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/ShieldCheckIcon.js [app-rsc] (ecmascript) <export default as ShieldCheckIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$HomeIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__HomeIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/HomeIcon.js [app-rsc] (ecmascript) <export default as HomeIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$WrenchIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__WrenchIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/WrenchIcon.js [app-rsc] (ecmascript) <export default as WrenchIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$BoltIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__BoltIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/@heroicons/react/24/outline/esm/BoltIcon.js [app-rsc] (ecmascript) <export default as BoltIcon>");
+;
 const ARTICLE_BASE_URL = 'https://ihresite.de'; // Gerçek domaininizle güncelleyin!
 // Toplam 10 makale için örnek veri
 const articlesData = [
@@ -37,12 +46,12 @@ const articlesData = [
         readTime: '5 Min. Lesezeit',
         datePublished: '2024-12-10T09:00:00+01:00',
         dateModified: '2024-12-15T10:30:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/tuer-zugezogen-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$KeyIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__KeyIcon$3e$__["KeyIcon"],
         content: `
-            <p>Wenn die Tür nur zugezogen ist (nicht abgeschlossen), ist die Türöffnung meist einfach und kann beschädigungsfrei in wenigen Sekunden durchgeführt werden.</p>
-            <h2>1. Ruhe bewahren und den Profi rufen</h2>
-            <p>Der wichtigste Schritt ist, ruhig zu bleiben. Rufen Sie sofort unsere 24/7 Notfallnummer an.</p>
-        `
+      <p>Wenn die Tür nur zugezogen ist (nicht abgeschlossen), ist die Türöffnung meist einfach und kann beschädigungsfrei in wenigen Sekunden durchgeführt werden.</p>
+      <h2>1. Ruhe bewahren und den Profi rufen</h2>
+      <p>Der wichtigste Schritt ist, ruhig zu bleiben. Rufen Sie sofort unsere 24/7 Notfallnummer an.</p>
+    `
     },
     {
         slug: 'autoschluessel-nachmachen',
@@ -51,12 +60,12 @@ const articlesData = [
         readTime: '7 Min. Lesezeit',
         datePublished: '2024-12-05T14:00:00+01:00',
         dateModified: '2024-12-15T10:30:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/autoschluessel-nachmachen-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$WrenchIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__WrenchIcon$3e$__["WrenchIcon"],
         content: `
-            <p>Einen Autoschlüssel beim Händler nachmachen zu lassen, kann teuer und zeitaufwändig sein. Unser mobiler Service kommt direkt zu Ihnen.</p>
-            <h2>Wie lange dauert der Prozess?</h2>
-            <p>In den meisten Fällen können wir einen neuen Schlüssel inkl. Programmierung in weniger als 60 Minuten anfertigen.</p>
-        `
+      <p>Einen Autoschlüssel beim Händler nachmachen zu lassen, kann teuer und zeitaufwändig sein. Unser mobiler Service kommt direkt zu Ihnen.</p>
+      <h2>Wie lange dauert der Prozess?</h2>
+      <p>In den meisten Fällen können wir einen neuen Schlüssel inkl. Programmierung in weniger als 60 Minuten anfertigen.</p>
+    `
     },
     {
         slug: 'einbruchschutz-tipps',
@@ -65,10 +74,10 @@ const articlesData = [
         readTime: '6 Min. Lesezeit',
         datePublished: '2024-11-20T10:00:00+01:00',
         dateModified: '2024-12-01T10:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/einbruchschutz-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$ShieldCheckIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheckIcon$3e$__["ShieldCheckIcon"],
         content: `
-            <p>Gute Sicherheit beginnt bei den Fenstern und Türen. Achten Sie auf geprüfte Sicherheitsschlösser.</p>
-        `
+      <p>Gute Sicherheit beginnt bei den Fenstern und Türen. Achten Sie auf geprüfte Sicherheitsschlösser.</p>
+    `
     },
     {
         slug: 'sicherheitsschloss-wechseln',
@@ -77,10 +86,10 @@ const articlesData = [
         readTime: '8 Min. Lesezeit',
         datePublished: '2024-11-15T12:00:00+01:00',
         dateModified: '2024-11-15T12:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/sicherheitsschloss-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$LockClosedIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LockClosedIcon$3e$__["LockClosedIcon"],
         content: `
-            <p>Der Wechsel eines Sicherheitsschlosses kann aus verschiedenen Gründen notwendig sein, z.B. bei Schlüsselverlust.</p>
-        `
+      <p>Der Wechsel eines Sicherheitsschlosses kann aus verschiedenen Gründen notwendig sein, z.B. bei Schlüsselverlust.</p>
+    `
     },
     {
         slug: 'schliessanlage-planen',
@@ -89,10 +98,10 @@ const articlesData = [
         readTime: '10 Min. Lesezeit',
         datePublished: '2024-11-10T08:00:00+01:00',
         dateModified: '2024-11-10T08:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/schliessanlage-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$HomeIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__HomeIcon$3e$__["HomeIcon"],
         content: `
-            <p>Eine gute Schließanlage bietet Komfort und Sicherheit. Wir helfen Ihnen bei der Auswahl der Komponenten.</p>
-        `
+      <p>Eine gute Schließanlage bietet Komfort und Sicherheit. Wir helfen Ihnen bei der Auswahl der Komponenten.</p>
+    `
     },
     {
         slug: 'briefkasten-oeffnen',
@@ -101,10 +110,10 @@ const articlesData = [
         readTime: '4 Min. Lesezeit',
         datePublished: '2024-10-25T13:00:00+01:00',
         dateModified: '2024-10-25T13:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/briefkasten-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$EnvelopeIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__EnvelopeIcon$3e$__["EnvelopeIcon"],
         content: `
-            <p>Der Verlust eines Briefkastenschlüssels ist ärgerlich, aber meist schnell behoben.</p>
-        `
+      <p>Der Verlust eines Briefkastenschlüssels ist ärgerlich, aber meist schnell behoben.</p>
+    `
     },
     {
         slug: 'tresor-oeffnen',
@@ -113,22 +122,22 @@ const articlesData = [
         readTime: '7 Min. Lesezeit',
         datePublished: '2024-10-15T11:00:00+01:00',
         dateModified: '2024-10-15T11:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/tresor-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$LockClosedIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LockClosedIcon$3e$__["LockClosedIcon"],
         content: `
-            <p>Wir bieten diskrete und professionelle Tresoröffnungen für alle gängigen Modelle.</p>
-        `
+      <p>Wir bieten diskrete und professionelle Tresoröffnungen für alle gängigen Modelle.</p>
+    `
     },
     {
         slug: 'motorradschloss-defekt',
         title: 'Motorradschloss defekt: Hilfe bei Zünd- und Lenkradschloss-Problemen',
         description: 'Schnelle und mobile Lösungen für Motorradschlossdefekte.',
-        readTime: '5 Min. Lesezeit',
+        readTime: '7 Min. Lesezeit',
         datePublished: '2024-10-01T15:00:00+01:00',
-        dateModified: '2024-10-01T15:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/motorradschloss-hero.jpg`,
+        dateModified: '2024-12-16T13:00:00+01:00',
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$CogIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__CogIcon$3e$__["CogIcon"],
         content: `
-            <p>Ein defektes Motorradschloss kann die Fahrt schnell beenden. Rufen Sie unseren mobilen Service.</p>
-        `
+      <p>Ein defektes Motorradschloss kann die Fahrt abrupt beenden und für viel Stress sorgen...</p>
+    `
     },
     {
         slug: 'garagentor-oeffnen',
@@ -137,10 +146,10 @@ const articlesData = [
         readTime: '6 Min. Lesezeit',
         datePublished: '2024-09-25T09:00:00+01:00',
         dateModified: '2024-09-25T09:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/garagentor-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$BoltIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__BoltIcon$3e$__["BoltIcon"],
         content: `
-            <p>Ob manuell oder elektrisch, Garagentore bazen takılabilir. Wir sind schnell vor Ort.</p>
-        `
+      <p>Ob manuell oder elektrisch, Garagentore können manchmal blockieren. Wir sind schnell vor Ort.</p>
+    `
     },
     {
         slug: 'batteriewechsel-autoschluessel',
@@ -149,10 +158,10 @@ const articlesData = [
         readTime: '3 Min. Lesezeit',
         datePublished: '2024-09-15T11:00:00+01:00',
         dateModified: '2024-09-15T11:00:00+01:00',
-        imageUrl: `${ARTICLE_BASE_URL}/images/batteriewechsel-hero.jpg`,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$24$2f$outline$2f$esm$2f$WrenchIcon$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__WrenchIcon$3e$__["WrenchIcon"],
         content: `
-            <p>Die meisten modernen Autoschlüssel eine CR2032 Batterie. Hier ist die Schritt-für-Schritt-Anleitung.</p>
-        `
+      <p>Die meisten modernen Autoschlüssel nutzen eine CR2032 Batterie. Hier ist die Schritt-für-Schritt-Anleitung.</p>
+    `
     }
 ];
 function getArticleContentBySlug(slug) {
@@ -164,8 +173,9 @@ function getAllArticleSlugs() {
         }));
 }
 function getAllArticlesContent() {
-    // Liste sayfasında kullanmak için makaleleri yayın tarihine göre sıralayabiliriz
-    return articlesData.sort((a, b)=>new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
+    return [
+        ...articlesData
+    ].sort((a, b)=>new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
 }
 }),
 "[project]/src/app/ratgeber/[slug]/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {

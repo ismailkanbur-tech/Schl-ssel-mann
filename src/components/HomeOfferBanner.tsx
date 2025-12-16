@@ -1,56 +1,69 @@
-// src/components/HomeOfferBanner.tsx
-import { BoltIcon, ShieldCheckIcon, ClockIcon } from '@heroicons/react/24/solid';
+// src/components/HomeOfferBanner.tsx - SEO Destekli ve Görsel Olarak Geliştirilmiş
+import { BoltIcon, ShieldCheckIcon, ClockIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 interface HomeOfferBannerProps {
     defaultTelefon: string;
-    cityColorClass: string; // 'text-red-600' veya 'text-blue-600' gibi
+    cityColorClass: string; // Örn: 'text-red-600'
+    cityName?: string; // Opsiyonel: Şehir adını buraya ekleyerek bölgesel SEO'yu güçlendiririz
 }
 
-const HomeOfferBanner: React.FC<HomeOfferBannerProps> = ({ defaultTelefon, cityColorClass }) => {
+const HomeOfferBanner: React.FC<HomeOfferBannerProps> = ({ defaultTelefon, cityColorClass, cityName }) => {
     
-    // Banner rengi arka plan rengine dönüştürülür
+    // Banner rengi arka plan rengine dönüştürülür (örn: text-red-600 -> bg-red-600)
     const bannerBgClass = cityColorClass.replace('text-', 'bg-');
+    // CTA butonu için zıt renk (bu bir banner olduğu için beyaz kullanalım)
+    const ctaTextClass = cityColorClass; 
     
-    // Tailwind'de pulse animasyonu ile hafif aciliyet yaratma
-    const animationClass = "animate-pulse-slow"; 
+    // Tailwind'de pulse animasyonu ile hafif aciliyet yaratma (Varsayılan pulse kullanılır)
+    const animationClass = "animate-pulse"; 
     
+    const locationText = cityName ? ` in ${cityName} und Umgebung` : '';
+
     return (
-        <section className="my-10">
+        <section className="my-10" aria-label="24/7 Notdienst Banner">
             <div className={`max-w-6xl mx-auto p-6 md:p-8 rounded-2xl shadow-2xl ${bannerBgClass} text-white`}>
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     
-                    {/* Sol Kısım: Başlık ve Animasyonlu İkon */}
+                    {/* Sol Kısım: Başlık, SEO ve Animasyonlu İkon */}
                     <div className="flex items-center mb-4 md:mb-0">
-                        <BoltIcon className={`h-12 w-12 mr-4 flex-shrink-0 ${animationClass}`} />
+                        <BoltIcon className={`h-12 w-12 mr-4 flex-shrink-0 text-yellow-300 ${animationClass}`} />
                         <div className="text-left">
-                            <p className="text-xl font-light opacity-90">Ihre lokale Notfalllösung</p>
-                            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-                                🔑 24/7 SCHLÜSSELDIENST SOFORTHILFE!
-                            </h2>
+                            
+                            {/* Anahtar kelime yoğunluğunu artırır */}
+                            <strong className="text-xl font-bold block text-yellow-300">
+                                24/7 Soforthilfe für Auto- & Türöffnung
+                            </strong>
+                            
+                            {/* Ana başlık yerine vurgu metni (SEO açısından h1/h2 çatışmasını önler) */}
+                            <span className="text-3xl md:text-4xl font-extrabold leading-tight">
+                                SCHLÜSSELDIENST{locationText}
+                            </span>
                         </div>
                     </div>
 
-                    {/* Sağ Kısım: CTA ve Vurgu */}
-                    <div className="text-center md:text-right flex flex-col items-center md:items-end">
-                        <p className="text-lg font-semibold mb-2 flex items-center">
+                    {/* Sağ Kısım: CTA ve Güven Vurgusu */}
+                    <div className="text-center md:text-right flex flex-col items-center md:items-end mt-4 md:mt-0">
+                        
+                        {/* Güven ve Şeffaflık Vurgusu */}
+                        <p className="text-lg font-bold mb-2 flex items-center justify-center md:justify-end">
                             <ShieldCheckIcon className="h-5 w-5 mr-2 text-yellow-300" />
-                            Festpreis-Garantie
+                            Festpreis-Garantie & 15 Min. Anfahrt
                         </p>
+                        
+                        {/* CTA Düğmesi - Kontrastı artırıldı */}
                         <a 
                             href={`tel:${defaultTelefon}`} 
-                            className={`inline-flex items-center px-8 py-3 bg-white ${cityColorClass} font-black text-2xl rounded-full shadow-lg transition duration-300 hover:scale-105 hover:shadow-xl`}
+                            className={`inline-flex items-center px-8 py-3 bg-white ${ctaTextClass} font-black text-2xl rounded-full shadow-2xl transition duration-300 hover:scale-[1.03] hover:shadow-xl uppercase tracking-wider`}
                         >
-                            <ClockIcon className="h-6 w-6 mr-3" />
-                            Jetzt Anrufen: {defaultTelefon}
+                            <PhoneIcon className="h-6 w-6 mr-3" />
+                            JETZT ANRUFEN: {defaultTelefon}
                         </a>
                     </div>
                 </div>
             </div>
             
-            {/* Animasyon için Tailwind ayarı gerekirse buraya not düşülür */}
-            {/* Not: Eğer 'animate-pulse-slow' Tailwind'de tanımlı değilse, sadece 'animate-pulse' kullanılabilir. */}
-
+            {/* Not: 'animate-pulse-slow' kullanmak için tailwind.config.js dosyanızda özel bir animasyon tanımlamanız gerekebilir. */}
         </section>
     );
 };

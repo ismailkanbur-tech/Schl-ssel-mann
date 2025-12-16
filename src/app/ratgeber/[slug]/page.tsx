@@ -1,4 +1,4 @@
-// src/app/ratgeber/[slug]/page.tsx - Makale Detay Sayfası
+// src/app/ratgeber/[slug]/page.tsx - Makale Detay Sayfası (ikon çözümü)
 
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 // 2. Metadata
 // --------------------------------------------------------------------------------
 export async function generateMetadata({ params }: { params: Promise<ArticleParams> }): Promise<Metadata> {
-  const { slug } = await params; // ✅ unwrap
+  const { slug } = await params;
   const article = await getArticleContentBySlug(slug);
 
   if (!article) {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<ArticlePara
 // 3. Ana Component
 // --------------------------------------------------------------------------------
 export default async function ArticlePage({ params }: { params: Promise<ArticleParams> }) {
-  const { slug } = await params; // ✅ unwrap
+  const { slug } = await params;
   const article = await getArticleContentBySlug(slug);
 
   if (!article) {
@@ -67,12 +67,6 @@ export default async function ArticlePage({ params }: { params: Promise<ArticleP
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "image": {
-      "@type": "ImageObject",
-      "url": article.imageUrl,
-      "width": 1200,
-      "height": 675,
-    },
     "author": { "@type": "Organization", "name": "Schlüsselmann" },
     "publisher": {
       "@type": "Organization",

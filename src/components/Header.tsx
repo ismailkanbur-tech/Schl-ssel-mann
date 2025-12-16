@@ -2,132 +2,175 @@
 
 import Link from 'next/link';
 import {
-  PhoneIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  UserIcon,
-  MapPinIcon,
-  ListBulletIcon,
-  Bars3Icon,
-  XMarkIcon,
-  ListBulletIcon as GuideIcon, // Rehber için farklı bir ikon kullanalım
+    PhoneIcon,
+    ClockIcon,
+    ShieldCheckIcon,
+    MapPinIcon,
+    Bars3Icon,
+    XMarkIcon,
+    UserIcon,
+    WrenchScrewdriverIcon, 
+    BookOpenIcon, 
+    GlobeAltIcon, 
 } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
 
-const GLOBAL_TELEFON = ' 0177 3977646';
-const PRIMARY_COLOR = 'text-blue-600';
-const SECONDARY_COLOR = 'bg-blue-600';
+// ✅ YENİ RENK PALETİ (Hero Section ile senkronize)
+const GLOBAL_TELEFON = '0177 3977646';
+const PRIMARY_COLOR_TEXT = 'text-blue-600'; // Ana site rengi
+const PRIMARY_COLOR_BG = 'bg-gray-800'; // Üst bar ve mobil menü butonu
+const ACCENT_COLOR_CTA = 'bg-red-600'; // GÜÇLÜ CTA: Aciliyet için kırmızı
+const ACCENT_COLOR_HOVER = 'hover:bg-red-700'; // CTA hover rengi
 
 const Header: React.FC = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // 100px aşağı kaydırıldığında sticky yap
-      setIsSticky(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-  return (
-    <header className="shadow-lg">
-      {/* Top Bar */}
-      <div className={`py-2 text-sm text-white ${SECONDARY_COLOR} hidden md:block`}>
-        <div className="container mx-auto px-4 flex justify-center space-x-8">
-          <span className="flex items-center">
-            <ClockIcon className="h-4 w-4 mr-1 text-yellow-300" />
-            24/7 Notdienst (auch Feiertage)
-          </span>
-          <span className="flex items-center">
-            <ShieldCheckIcon className="h-4 w-4 mr-1 text-yellow-300" />
-            Festpreis-Garantie
-          </span>
-          <span className="flex items-center">
-            <MapPinIcon className="h-4 w-4 mr-1 text-yellow-300" />
-            Lokale Soforthilfe in Ihrer Region
-          </span>
-        </div>
-      </div>
+    const navItems = [
+        { href: '/ueber-uns', label: 'Über uns', icon: UserIcon },
+        { href: '/leistungen', label: 'Leistungen', icon: WrenchScrewdriverIcon },
+        { href: '/regionen', label: 'Regionen', icon: GlobeAltIcon },
+        { href: '/ratgeber', label: 'Ratgeber', icon: BookOpenIcon },
+    ];
 
-      {/* Main Nav */}
-      <nav
-        className={`w-full bg-white transition-all duration-300 ${
-          isSticky ? 'fixed top-0 z-50 shadow-2xl' : ''
-        }`}
-      >
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center text-2xl font-black tracking-wide">
-            <span className={PRIMARY_COLOR}>Ka</span>Service
-          </Link>
+    const closeMobileMenu = () => setMobileOpen(false);
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex space-x-6 text-gray-700 font-medium">
-            <Link href="/ueber-uns" className="flex items-center hover:text-blue-600 transition">
-              <UserIcon className="h-4 w-4 mr-1" /> Über uns
-            </Link>
-            <Link href="/leistungen" className="flex items-center hover:text-blue-600 transition">
-              <ListBulletIcon className="h-4 w-4 mr-1" /> Unsere Leistungen
-            </Link>
-            <Link href="/regionen" className="flex items-center hover:text-blue-600 transition">
-              <MapPinIcon className="h-4 w-4 mr-1" /> Regionen
-            </Link>
-            {/* ✅ YENİ EKLENEN LİNK */}
-            <Link href="/ratgeber" className="flex items-center hover:text-blue-600 transition">
-              <GuideIcon className="h-4 w-4 mr-1" /> Ratgeber
-            </Link>
-          </div>
+    return (
+        <header>
+            {/* 1. Top Bar - Koyu Tema ve Beyaz Metin */}
+            <div className={`py-2 text-xs md:text-sm text-white ${PRIMARY_COLOR_BG}`}>
+                <div className="container mx-auto px-4 flex justify-center space-x-4 md:space-x-8">
+                    <span className="flex items-center">
+                        <ClockIcon className="h-4 w-4 mr-1 text-yellow-400 animate-pulse" />
+                        24/7 Notdienst
+                    </span>
+                    <span className="flex items-center">
+                        <ShieldCheckIcon className="h-4 w-4 mr-1 text-yellow-400" />
+                        Festpreis-Garantie
+                    </span>
+                    <span className="hidden sm:flex items-center">
+                        <MapPinIcon className="h-4 w-4 mr-1 text-yellow-400" />
+                        Lokale Soforthilfe
+                    </span>
+                </div>
+            </div>
 
-          {/* CTA */}
-          <a
-            href={`tel:${GLOBAL_TELEFON}`}
-            className={`hidden md:inline-flex items-center px-4 py-2 ${SECONDARY_COLOR} text-white font-bold rounded-full shadow-md transition duration-300 hover:bg-blue-700 hover:scale-105`}
-          >
-            <PhoneIcon className="h-5 w-5 mr-2" />
-            {isSticky ? 'JETZT ANRUFEN' : GLOBAL_TELEFON}
-          </a>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Nav */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-gray-50 border-t border-gray-200 px-4 py-4 space-y-4">
-            <Link href="/ueber-uns" className="block text-gray-700 font-medium hover:text-blue-600">
-              Über uns
-            </Link>
-            <Link href="/leistungen" className="block text-gray-700 font-medium hover:text-blue-600">
-              Unsere Leistungen
-            </Link>
-            <Link href="/regionen" className="block text-gray-700 font-medium hover:text-blue-600">
-              Regionen
-            </Link>
-            {/* ✅ YENİ EKLENEN LİNK */}
-            <Link href="/ratgeber" className="block text-gray-700 font-medium hover:text-blue-600">
-              Ratgeber
-            </Link>
-            <a
-              href={`tel:${GLOBAL_TELEFON}`}
-              className="block w-full text-center px-4 py-2 bg-blue-600 text-white font-bold rounded-md shadow-md hover:bg-blue-700"
+            {/* 2. Main Nav - Yapışkan ve Güçlü Vurgu */}
+            <nav
+                className={`w-full bg-white transition-all duration-300 ${
+                    isSticky ? 'fixed top-0 z-[100] shadow-2xl border-b-4 border-red-600' : 'border-b border-gray-100' // Yapışıkken KIRMIZI border
+                }`}
             >
-              Jetzt anrufen
-            </a>
-          </div>
-        )}
-      </nav>
+                <div className="container mx-auto px-4 py-3 flex justify-between items-center h-full">
+                    
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center text-3xl font-black tracking-tighter transition-transform duration-300 hover:scale-[1.02]">
+                        <span className={`${PRIMARY_COLOR_TEXT} mr-1`}>Ka</span>
+                        <span className="text-gray-900">Service</span>
+                    </Link>
 
-      {/* Sticky Header'ın altında kayan içeriğin görünmemesi için boşluk bırakma (sadece yapışıkken) */}
-      {isSticky && <div className="h-[72px] md:h-[72px]" />}
-    </header>
-  );
+                    {/* Desktop Nav */}
+                    <div className="hidden lg:flex space-x-8 text-gray-700 font-semibold">
+                        {navItems.map((item) => (
+                            <Link 
+                                key={item.href} 
+                                href={item.href} 
+                                className={`flex items-center text-lg transition duration-200 border-b-2 border-transparent hover:border-blue-600 hover:${PRIMARY_COLOR_TEXT}`}
+                            >
+                                <item.icon className={`h-5 w-5 mr-1 text-gray-400 group-hover:${PRIMARY_COLOR_TEXT}`} /> 
+                                {item.label}
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* CTA - Kırmızı Acil Düğme */}
+                    <a
+                        href={`tel:${GLOBAL_TELEFON}`}
+                        className={`hidden md:inline-flex items-center px-6 py-3 ${ACCENT_COLOR_CTA} text-white font-extrabold rounded-full shadow-xl transition duration-300 ${ACCENT_COLOR_HOVER} hover:scale-[1.05] text-lg uppercase tracking-wide`}
+                    >
+                        <PhoneIcon className="h-6 w-6 mr-2 animate-wiggle" />
+                        {isSticky ? 'SOFORT ANRUFEN' : GLOBAL_TELEFON}
+                    </a>
+
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className={`p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition lg:hidden shadow-md`} // Mavi renk kullanıldı
+                        onClick={() => setMobileOpen(!mobileOpen)}
+                    >
+                        {mobileOpen ? <XMarkIcon className="h-7 w-7" /> : <Bars3Icon className="h-7 w-7" />}
+                    </button>
+                </div>
+
+                {/* 3. Mobile Nav - Tam Ekran ve Animasyonlu */}
+                <div 
+                    className={`fixed inset-0 lg:hidden z-50 transform transition-opacity duration-300 ${
+                        mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                    }`}
+                >
+                    {/* Arkaplan Karartma (Overlay) */}
+                    <div 
+                        className={`absolute inset-0 bg-gray-900/80 transition-opacity duration-300 ${
+                            mobileOpen ? 'opacity-100' : 'opacity-0'
+                        }`}
+                        onClick={closeMobileMenu}
+                    />
+
+                    {/* Menü Paneli - Sağdan İçeri Kayma */}
+                    <div 
+                        className={`absolute top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl p-6 transform transition-transform duration-500 ease-in-out ${
+                            mobileOpen ? 'translate-x-0' : 'translate-x-full'
+                        }`}
+                    >
+                        <div className="flex justify-end mb-8">
+                            {/* Kapat Butonu */}
+                            <button
+                                className="p-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition"
+                                onClick={closeMobileMenu}
+                            >
+                                <XMarkIcon className="h-8 w-8" />
+                            </button>
+                        </div>
+
+                        {/* Navigasyon Linkleri */}
+                        <nav className="flex flex-col space-y-3">
+                            {navItems.map((item) => (
+                                <Link 
+                                    key={item.href} 
+                                    href={item.href} 
+                                    onClick={closeMobileMenu}
+                                    className={`flex items-center text-xl font-semibold text-gray-800 p-4 rounded-xl transition duration-200 hover:bg-blue-50 hover:${PRIMARY_COLOR_TEXT} border-l-4 border-transparent hover:border-blue-600`}
+                                >
+                                    <item.icon className="h-6 w-6 mr-4 text-gray-500" /> 
+                                    {item.label}
+                                </Link>
+                            ))}
+                        </nav>
+
+                        {/* Mobil CTA - Alt kısma sabitleme */}
+                        <div className="mt-12 pt-6 border-t border-gray-200">
+                             <a
+                                href={`tel:${GLOBAL_TELEFON}`}
+                                onClick={closeMobileMenu}
+                                className={`w-full text-center flex items-center justify-center px-6 py-4 ${ACCENT_COLOR_CTA} text-white font-extrabold rounded-xl shadow-2xl transition duration-300 ${ACCENT_COLOR_HOVER} text-xl uppercase tracking-wider`}
+                            >
+                                <PhoneIcon className="h-6 w-6 mr-3" />
+                                JETZT 24/7 ANRUFEN
+                            </a>
+                            <p className="text-center text-xs text-gray-500 mt-2">15-30 Min. Anfahrt • Festpreis-Garantie</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
 };
 
 export default Header;

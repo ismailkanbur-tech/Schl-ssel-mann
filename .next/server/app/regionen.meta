@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/regionen/layout,_N_T_/regionen/page,_N_T_/regionen"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/regionen/__PAGE__",
+    "/regionen",
+    "/_index",
+    "/_head"
+  ]
+}

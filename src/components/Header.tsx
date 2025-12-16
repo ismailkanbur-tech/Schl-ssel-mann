@@ -14,7 +14,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
 
-const GLOBAL_TELEFON = '089-111111';
+const GLOBAL_TELEFON = ' 0177 3977646';
 const PRIMARY_COLOR = 'text-blue-600';
 const SECONDARY_COLOR = 'bg-blue-600';
 
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center text-2xl font-black tracking-wide">
-            <span className={PRIMARY_COLOR}>Schlüssel</span>mann
+            <span className={PRIMARY_COLOR}>Ka</span>Service
           </Link>
 
           {/* Desktop Nav */}

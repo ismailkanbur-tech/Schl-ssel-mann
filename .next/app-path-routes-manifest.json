@@ -1,0 +1,17 @@
+{
+  "/[citySlug]/[townSlug]/page": "/[citySlug]/[townSlug]",
+  "/[citySlug]/page": "/[citySlug]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/agb/page": "/agb",
+  "/datenschutz/page": "/datenschutz",
+  "/favicon.ico/route": "/favicon.ico",
+  "/impressum/page": "/impressum",
+  "/leistungen/page": "/leistungen",
+  "/page": "/",
+  "/ratgeber/[slug]/page": "/ratgeber/[slug]",
+  "/ratgeber/page": "/ratgeber",
+  "/regionen/page": "/regionen",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/ueber-uns/page": "/ueber-uns"
+}

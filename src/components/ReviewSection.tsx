@@ -28,7 +28,7 @@ const reviews: Review[] = [
         rating: 5,
     },
     {
-        name: 'Julia K.',
+        name: 'Ismail K.',
         city: 'Augsburg',
         text: 'Mein Autoschlüssel war verloren. Schlüsselmann hat direkt vor Ort einen neuen programmiert. Top Service und faire Preise! Gerne wieder.',
         rating: 5,

@@ -38,7 +38,7 @@ export default function HomePage() {
     // NOT: citiesData içindeki en düşük fiyatı bulmak daha doğru olur.
     // Şimdilik en düşük varsayılan fiyatı kullanalım.
     const defaultPrice = 'ab 49€'; 
-    const defaultTelefon = '089-111111';
+    const defaultTelefon = '0177 3977646';
     const defaultColorClass = 'text-blue-600';
 
     // ----------------------------------------------------------------------

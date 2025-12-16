@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { TruckIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
-const centralPhone = "089-111111";
+const centralPhone = " 0177 3977646";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -21,7 +21,7 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-2">
                         <Link href="/" className={`flex items-center space-x-2 text-3xl font-black text-white mb-4 tracking-tight`}>
                             <TruckIcon className={`h-8 w-8 ${primaryColor}`} />
-                            <span className={primaryColor}>Schlüssel</span>mann
+                            <span className={primaryColor}>Ka</span>Service
                         </Link>
                         <p className="text-sm leading-relaxed text-gray-400">
                             Ihr Notdienst für Auto- und Türöffnung in Bayern. 
@@ -85,7 +85,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="mt-12 pt-8 border-t border-gray-700/50 text-center text-xs text-gray-500">
-                    &copy; {currentYear} Schlüsselmann. Alle Rechte vorbehalten. | <Link href="/impressum" className="hover:underline">Impressum</Link> | <Link href="/datenschutz" className="hover:underline">Datenschutz</Link>
+                    &copy; {currentYear} KA Service . Alle Rechte vorbehalten. | <Link href="/impressum" className="hover:underline">Impressum</Link> | <Link href="/datenschutz" className="hover:underline">Datenschutz</Link>
                 </div>
             </div>
         </footer>

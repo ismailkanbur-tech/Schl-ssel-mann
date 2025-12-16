@@ -1,22 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Source map uyarılarını kapatır (dev ortamında konsol temiz kalır)
   productionBrowserSourceMaps: false,
-
-  // React Strict Mode: geliştirme sırasında hataları daha erken yakalar
   reactStrictMode: true,
+  trailingSlash: false,
+  poweredByHeader: false,
 
-  // Opsiyonel: Turbopack yerine Webpack kullanmak istersen
-  // experimental: { turbo: false },
+  // CSS ve JS preload optimizasyonu
+  experimental: {
+    optimizeCss: true,        // CSS dosyalarını daha verimli işler
+    optimizePackageImports: ['react', 'next/font'], // gereksiz preload azaltır
+  },
 
-  // SEO ve performans için faydalı olabilir
-  trailingSlash: false, // URL'lerde gereksiz slash eklenmez
-  poweredByHeader: false, // X-Powered-By header'ını kapatır (güvenlik için)
-
-  // Image optimizasyonu (Next.js Image bileşeni kullanıyorsan)
+  // Görsel optimizasyonu
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: [], // dış kaynaklardan görsel yükleyeceksen buraya domain ekle
+    domains: ['deinedomain.de'], // harici görsel kullanıyorsan buraya ekle
+  },
+
+  // Prefetch davranışını kontrol et
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production', // prod'da console.log temizler
   },
 };
 

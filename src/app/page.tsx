@@ -213,7 +213,7 @@ export default function HomePage() {
 
                             {/* 2. Sekundär-CTA (WhatsApp - Yeşil) */}
                             <a
-                                href="https://wa.me/491234567890" 
+                                href="https://wa.me/0177 3977646" 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-3 bg-green-600 text-white font-semibold rounded-xl shadow-md hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2 min-w-[200px] text-lg"
@@ -313,7 +313,7 @@ export default function HomePage() {
             {/* SEO Footer Text */}
             <div className="mt-20 text-center pb-12 pt-8 border-t border-gray-100">
                 <p className="text-base text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                    Wir sind Ihr zuverlässiger Partner in <span className="font-semibold">München, Dachau und Freising</span>. 
+                    Wir sind Ihr zuverlässiger Partner in <span className="font-semibold">München, Dachau,Fürstenfeldbruck und Freising</span>. 
                     Mit lokalem Know-how, schneller Anfahrt und transparenten Preisen stehen wir Ihnen 24/7 zur Seite. 
                     Ihre Sicherheit – unser Versprechen.
                 </p>

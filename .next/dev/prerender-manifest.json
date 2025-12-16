@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/muenchen":{},"/dachau":{},"/freising":{},"/fuerstenfeldbruck":{},"/muenchen/muenchen-city":{},"/muenchen/pasing":{},"/muenchen/sendling":{},"/muenchen/schwabing":{},"/muenchen/haidhausen":{},"/muenchen/neuhausen":{},"/muenchen/garching":{},"/muenchen/unterfoehring":{},"/muenchen/frankfurt-strasse":{},"/muenchen/moosach":{},"/muenchen/ramersdorf":{},"/muenchen/hasenbergl":{},"/dachau/dachau-stadt":{},"/dachau/markt-indersdorf":{},"/dachau/karlsfeld":{},"/dachau/altomuenster":{},"/dachau/bergkirchen":{},"/dachau/schwabhausen":{},"/dachau/pauli-heim":{},"/dachau/puchheim":{},"/dachau/olching":{},"/dachau/groebenzell":{},"/dachau/hebertshausen":{},"/dachau/rohrbach":{},"/dachau/weichs":{},"/dachau/vierkirchen":{},"/freising/freising-stadt":{},"/freising/moosburg":{},"/freising/hallbergmoos":{},"/freising/neufahrn":{},"/fuerstenfeldbruck/fuerstenfeldbruck-stadt":{},"/fuerstenfeldbruck/olching":{},"/fuerstenfeldbruck/groebenzell":{},"/fuerstenfeldbruck/maisach":{}},"dynamicRoutes":{"/[citySlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[citySlug]/[townSlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]/[townSlug]","routeRegex":"^\\/([^/]+?)\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"cf9467b9f682609f8f148534092c69ec","previewModeSigningKey":"88d01882e5d93e754bb94bc58c4bce82c34e793802bb7d5f250de2de71d27023","previewModeEncryptionKey":"a60f4c98d5c1f8f58f07dbb8eef8045cff6b1901023b76d4d967a57e793d5420"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "ba518d14d9c7394404f9669a88856e77",
+    "previewModeSigningKey": "f5132e5ccd02afeb3773e4eccaac00d93c4a71e09c6bfa311071b4c0abc213b2",
+    "previewModeEncryptionKey": "bed122abbcf394e08fe1be5878a11ece538fe83e42e59e185157d8434a6b9105"
+  }
+}

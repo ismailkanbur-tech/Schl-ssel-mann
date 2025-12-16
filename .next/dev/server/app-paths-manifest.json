@@ -1,9 +1,1 @@
-{
-  "/[citySlug]/[townSlug]/page": "app/[citySlug]/[townSlug]/page.js",
-  "/[citySlug]/page": "app/[citySlug]/page.js",
-  "/leistungen/page": "app/leistungen/page.js",
-  "/page": "app/page.js",
-  "/ratgeber/page": "app/ratgeber/page.js",
-  "/regionen/page": "app/regionen/page.js",
-  "/ueber-uns/page": "app/ueber-uns/page.js"
-}
+{}

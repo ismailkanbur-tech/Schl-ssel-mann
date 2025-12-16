@@ -520,21 +520,22 @@ async function DynamicTownPage({ params }) {
                 className: "text-center mb-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-4xl md:text-5xl font-extrabold text-gray-900 mb-4",
+                        className: "text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4",
                         children: [
-                            "Ihr lokaler ",
+                            "Ihr lokaler",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: textColor,
+                                className: `${textColor} break-words`,
                                 children: [
+                                    " ",
                                     "Schlüsseldienst ",
                                     townData.name
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 122,
-                                columnNumber: 33
+                                lineNumber: 123,
+                                columnNumber: 21
                             }, this),
-                            " – 24/7 Notfallservice"
+                            "– 24/7 Notfallservice"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
@@ -551,14 +552,14 @@ async function DynamicTownPage({ params }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 124,
+                        lineNumber: 128,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
                 lineNumber: 120,
-                columnNumber: 13
+                columnNumber: 25
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `${bannerColor} text-white p-8 md:p-10 rounded-xl shadow-2xl mb-12 flex flex-col md:flex-row items-center justify-between`,
@@ -570,7 +571,7 @@ async function DynamicTownPage({ params }) {
                                 className: "h-10 w-10 mr-4 flex-shrink-0 animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 132,
+                                lineNumber: 136,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -582,13 +583,13 @@ async function DynamicTownPage({ params }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 133,
+                                lineNumber: 137,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 131,
+                        lineNumber: 135,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -599,20 +600,20 @@ async function DynamicTownPage({ params }) {
                                 className: "h-6 w-6 mr-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 141,
+                                lineNumber: 145,
                                 columnNumber: 21
                             }, this),
                             townData.notdienstTelefon
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 137,
+                        lineNumber: 141,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                lineNumber: 130,
+                lineNumber: 134,
                 columnNumber: 14
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -625,7 +626,7 @@ async function DynamicTownPage({ params }) {
                                 className: "h-8 w-8 text-green-600 mx-auto mb-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 149,
+                                lineNumber: 153,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -633,7 +634,7 @@ async function DynamicTownPage({ params }) {
                                 children: "Festpreis-Garantie"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 150,
+                                lineNumber: 154,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -641,13 +642,13 @@ async function DynamicTownPage({ params }) {
                                 children: "Volle Kostentransparenz vor Ort. Keine versteckten Gebühren."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 151,
+                                lineNumber: 155,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 152,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -657,7 +658,7 @@ async function DynamicTownPage({ params }) {
                                 className: "h-8 w-8 text-yellow-600 mx-auto mb-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 154,
+                                lineNumber: 158,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -668,7 +669,7 @@ async function DynamicTownPage({ params }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 159,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -676,13 +677,13 @@ async function DynamicTownPage({ params }) {
                                 children: "Kurze Anfahrtswege, schnelle Hilfe, da wir in Ihrer Nähe sind."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 156,
+                                lineNumber: 160,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 153,
+                        lineNumber: 157,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -692,7 +693,7 @@ async function DynamicTownPage({ params }) {
                                 className: "h-8 w-8 text-red-600 mx-auto mb-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 159,
+                                lineNumber: 163,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -700,7 +701,7 @@ async function DynamicTownPage({ params }) {
                                 children: "24/7 Erreichbarkeit"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 160,
+                                lineNumber: 164,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -708,19 +709,19 @@ async function DynamicTownPage({ params }) {
                                 children: "Jederzeit für Sie da, auch an Wochenenden und Feiertagen."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 161,
+                                lineNumber: 165,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 158,
+                        lineNumber: 162,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                lineNumber: 147,
+                lineNumber: 151,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -734,7 +735,7 @@ async function DynamicTownPage({ params }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 167,
+                        lineNumber: 171,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -753,14 +754,14 @@ async function DynamicTownPage({ params }) {
                                                         className: `h-6 w-6 mr-2 ${textColor}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 178,
                                                         columnNumber: 87
                                                     }, this),
                                                     " Mobile Autoschlüssel Programmierung"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 178,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -772,13 +773,13 @@ async function DynamicTownPage({ params }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                lineNumber: 175,
+                                                lineNumber: 179,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 177,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -791,14 +792,14 @@ async function DynamicTownPage({ params }) {
                                                         className: `h-6 w-6 mr-2 ${textColor}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                        lineNumber: 181,
+                                                        lineNumber: 185,
                                                         columnNumber: 87
                                                     }, this),
                                                     " Haus- und Wohnungstüröffnung"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 185,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -810,19 +811,19 @@ async function DynamicTownPage({ params }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                lineNumber: 182,
+                                                lineNumber: 186,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                        lineNumber: 180,
+                                        lineNumber: 184,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 171,
+                                lineNumber: 175,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -838,7 +839,7 @@ async function DynamicTownPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 195,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -850,7 +851,7 @@ async function DynamicTownPage({ params }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 196,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -861,14 +862,14 @@ async function DynamicTownPage({ params }) {
                                                     className: "h-6 w-6 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                                    lineNumber: 199,
+                                                    lineNumber: 203,
                                                     columnNumber: 33
                                                 }, this),
                                                 townData.notdienstTelefon
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 199,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -876,30 +877,30 @@ async function DynamicTownPage({ params }) {
                                             children: "Wir sind 24 Stunden, 7 Tage die Woche erreichbar."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 206,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 194,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                                lineNumber: 189,
+                                lineNumber: 193,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                        lineNumber: 168,
+                        lineNumber: 172,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                lineNumber: 166,
+                lineNumber: 170,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$FaqSection$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -908,7 +909,7 @@ async function DynamicTownPage({ params }) {
                 cityColorClass: textColor
             }, void 0, false, {
                 fileName: "[project]/src/app/[citySlug]/[townSlug]/page.tsx",
-                lineNumber: 209,
+                lineNumber: 213,
                 columnNumber: 13
             }, this)
         ]

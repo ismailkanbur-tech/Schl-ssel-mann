@@ -119,10 +119,6 @@ export default function HomePage() {
                     __html: JSON.stringify(localBusinessSchema),
                 }}
             />
-
-        
-
-
                 {/* Yeni Hero Section: Güçlü Kontrast ve Aciliyet Hissi */}
                 <header className="relative mb-16 overflow-hidden rounded-3xl p-6 md:p-16 lg:p-20 bg-gray-900 text-white shadow-2xl border border-gray-700"> 
                     
@@ -185,35 +181,49 @@ export default function HomePage() {
                 </header>
 
             {/* CTA Banner (Korunmuş ve Hafifçe Modernleştirilmiş) */}
-            <div className="mb-16 rounded-2xl bg-blue-50 border border-blue-100 p-6 md:p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div className="flex-1 text-center md:text-left">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-2">Brauchen Sie jetzt Hilfe?</h2>
-                        <p className="text-gray-600">Rufen Sie uns direkt an oder schreiben Sie uns per WhatsApp.</p>
-                        <p className="text-xl font-extrabold text-blue-700 mt-2">{defaultPrice} Türöffnung</p>
-                    </div>
+   
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a
-                            href={`tel:${defaultTelefon.replace(/-/g, '')}`}
-                            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2 min-w-[180px]"
-                        >
-                            <PhoneIcon className="h-5 w-5" />
-                            {defaultTelefon}
-                        </a>
+                <div className="mb-16 rounded-3xl bg-blue-50 border-4 border-red-600/50 p-6 md:p-10 shadow-2xl transition-shadow duration-300">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        
+                        <div className="flex-1 text-center md:text-left">
+                            <h2 className="text-3xl font-extrabold text-gray-900 mb-2">
+                                Ihr lokaler <span className="text-red-600">Schlüssel-Notdienst</span> jetzt erreichbar
+                            </h2>
+                            <p className="text-gray-600 text-lg">
+                                Soforthilfe in **15–30 Minuten** vor Ort. Transparente Festpreise garantiert!
+                            </p>
+                            {/* Fiyat Vurgusu (Kırmızı ile aciliyet) */}
+                            <p className="text-2xl font-black text-red-600 mt-3 flex items-center justify-center md:justify-start gap-2">
+                                <ShieldCheckIcon className="h-6 w-6 text-blue-600" /> {/* İsteğe bağlı ikon eklendi */}
+                                {defaultPrice} Türöffnung Festpreis
+                            </p>
+                        </div>
 
-                        <a
-                            href="https://wa.me/491234567890" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg shadow-md hover:bg-green-600 transition-colors duration-200 flex items-center justify-center gap-2 min-w-[180px]"
-                        >
-                            <ChatBubbleLeftRightIcon className="h-5 w-5" />
-                            Chat starten
-                        </a>
+                        <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+                            
+                            {/* 1. Haupt-CTA (Telefon - Kırmızı) */}
+                            <a
+                                href={`tel:${defaultTelefon.replace(/-/g, '')}`}
+                                className="px-8 py-3 bg-red-600 text-white font-black rounded-xl shadow-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 min-w-[200px] uppercase tracking-wide text-lg"
+                            >
+                                <PhoneIcon className="h-6 w-6 animate-pulse" />
+                                {defaultTelefon}
+                            </a>
+
+                            {/* 2. Sekundär-CTA (WhatsApp - Yeşil) */}
+                            <a
+                                href="https://wa.me/491234567890" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-3 bg-green-600 text-white font-semibold rounded-xl shadow-md hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2 min-w-[200px] text-lg"
+                            >
+                                <ChatBubbleLeftRightIcon className="h-6 w-6" />
+                                WhatsApp Chat starten
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> 
 
 
             {/* USP Section (Hata Düzeltmeleri Yapıldı) */}
@@ -244,60 +254,58 @@ export default function HomePage() {
             
             <PriceTeaserSection />
 
-            {/* Städte Auswahl – Modern Liste (Link Yapısı Korunmuştur) */}
-            <section className="mt-20 mb-16">
-                <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">
-                    <MapPinIcon className="h-8 w-8 inline mr-2 text-blue-600" /> Wählen Sie Ihren <span className="text-blue-600">Standort</span>
-                </h2>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {cities.map((city) => {
-                        const isMuenchen = city.slug === 'muenchen';
-                        
-                        // Tam statik stringler (Hata önleyici)
-                        const cityColorClass = isMuenchen ? 'text-red-700' : 
-                                                 city.slug === 'dachau' ? 'text-blue-700' : 'text-emerald-700';
 
-                        const linkHoverBg = isMuenchen ? 'hover:bg-red-50' : 
-                                             city.slug === 'dachau' ? 'hover:bg-blue-50' : 'hover:bg-emerald-50';
-                                             
-                        const arrowHoverClass = isMuenchen ? 'text-red-700' :
-                                                city.slug === 'dachau' ? 'text-blue-700' : 'text-emerald-700';
+                <section className="mt-20 mb-16">
+                    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">
+                        <MapPinIcon className="h-8 w-8 inline mr-2 text-blue-600" /> 
+                        Wählen Sie Ihren <span className="text-blue-600">Standort</span>
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {cities.map((city) => {
+                            
+                            // Tek bir ana renk paletini kullanıyoruz (Mavi).
+                            const primaryColorClass = 'text-blue-600';
+                            const linkHoverBg = 'hover:bg-blue-50';
+                            const arrowHoverClass = 'text-blue-700';
 
-
-                        return (
-                            <Link
-                                key={city.slug}
-                                href={`/${city.slug}`} // Link yapısı korunmuştur!
-                                className={`group flex items-center p-5 border-2 border-gray-200 rounded-xl shadow-md transition duration-300 ${linkHoverBg} hover:shadow-xl transform hover:scale-[1.01]`}
-                            >
-                                <BuildingOffice2Icon
-                                    className={`h-7 w-7 mr-4 flex-shrink-0 ${cityColorClass}`}
-                                />
-                                <div className="flex-1">
-                                    <h3 className={`text-xl font-bold mb-0.5 ${cityColorClass}`}>
-                                        Schlüsseldienst {city.name}
-                                    </h3>
-                                    <p className="text-gray-600 text-sm">
-                                        Soforthilfe in {city.name} und Umgebung.
-                                    </p>
-                                </div>
-                                <ArrowLongRightIcon className={`h-6 w-6 ml-4 text-gray-400 group-hover:${arrowHoverClass} transition-transform group-hover:translate-x-1`} />
-                            </Link>
-                        );
-                    })}
-                </div>
-                
-                {/* Tüm Bölgeler Linki */}
-                <div className="text-center mt-10">
-                    <Link
-                        href="/regionen" 
-                        className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-800 transition duration-200"
-                    >
-                        Alle weiteren Einsatzgebiete ansehen →
-                    </Link>
-                </div>
-            </section>
+                            return (
+                                <Link
+                                    key={city.slug}
+                                    // Eğer şehir sayfalarınızın yolu /leistungen/[slug] ise,
+                                    // burada da aynı yolu kullanmalısınız. Varsayılanı koruyoruz:
+                                    href={`/${city.slug}`} 
+                                    className={`group flex items-center p-5 border-2 border-gray-200 rounded-xl shadow-md transition duration-300 ${linkHoverBg} hover:shadow-xl transform hover:scale-[1.01]`}
+                                >
+                                    <BuildingOffice2Icon
+                                        className={`h-7 w-7 mr-4 flex-shrink-0 ${primaryColorClass}`}
+                                    />
+                                    <div className="flex-1 min-w-0"> {/* ✅ min-w-0 eklendi, flex öğesi içinde taşmayı önler */}
+                                        <h3 className={`text-xl font-bold mb-0.5 ${primaryColorClass} break-words`}> {/* ✅ break-words eklendi */}
+                                            Schlüsseldienst {city.name}
+                                        </h3>
+                                        <p className="text-gray-600 text-sm">
+                                            Soforthilfe in {city.name} und Umgebung.
+                                        </p>
+                                    </div>
+                                    <ArrowLongRightIcon 
+                                        className={`h-6 w-6 ml-4 text-gray-400 group-hover:${arrowHoverClass} transition-transform group-hover:translate-x-1 flex-shrink-0`} 
+                                    />
+                                </Link>
+                            );
+                        })}
+                    </div>
+                    
+                    {/* Tüm Bölgeler Linki */}
+                    <div className="text-center mt-10">
+                        <Link
+                            href="/regionen" 
+                            className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-800 transition duration-200"
+                        >
+                            Alle weiteren Einsatzgebiete ansehen →
+                        </Link>
+                    </div>
+                </section>
 
             {/* Kundenbewertungen */}
             <ReviewSection />

@@ -116,10 +116,14 @@ export default async function DynamicTownPage({ params }: TownPageProps) {
                 <span className="font-semibold text-gray-700"> {townData!.name}</span>
             </nav>
 
-            {/* H1 BAŞLIK ve Acil CTA */}
-            <header className="text-center mb-10">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                    Ihr lokaler <span className={textColor}>Schlüsseldienst {townData!.name}</span> – 24/7 Notfallservice
+                        {/* H1 BAŞLIK ve Acil CTA */}
+                        <header className="text-center mb-10">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                    Ihr lokaler 
+                    <span className={`${textColor} break-words`}> {/* ✅ break-words eklendi */}
+                        Schlüsseldienst {townData!.name}
+                    </span> 
+                    – 24/7 Notfallservice
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
                     {townData!.metaDescription} Wir sind garantiert schnell in {townData!.name} und ohne versteckte Kosten für Sie da.

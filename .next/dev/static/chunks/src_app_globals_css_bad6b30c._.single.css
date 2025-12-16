@@ -78,6 +78,7 @@
     --color-green-400: #05df72;
     --color-green-500: #00c758;
     --color-green-600: #00a544;
+    --color-green-700: #008138;
     --color-emerald-50: #ecfdf5;
     --color-emerald-600: #009767;
     --color-emerald-700: #007956;
@@ -186,6 +187,7 @@
       --color-green-400: lab(78.503% -64.9265 39.7492);
       --color-green-500: lab(70.5521% -66.5147 45.8072);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
+      --color-green-700: lab(47.0329% -47.0239 31.4788);
       --color-emerald-50: lab(97.8462% -6.94963 1.85487);
       --color-emerald-600: lab(55.0481% -49.9246 15.93);
       --color-emerald-700: lab(44.4871% -41.0396 11.0361);
@@ -886,8 +888,16 @@
     max-width: var(--container-xs);
   }
 
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
+
   .min-w-\[180px\] {
     min-width: 180px;
+  }
+
+  .min-w-\[200px\] {
+    min-width: 200px;
   }
 
   .flex-1 {
@@ -1091,6 +1101,11 @@
     border-width: 2px;
   }
 
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
@@ -1185,6 +1200,16 @@
     border-color: var(--color-red-600);
   }
 
+  .border-red-600\/50 {
+    border-color: #e4001480;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-red-600\/50 {
+      border-color: color-mix(in oklab, var(--color-red-600) 50%, transparent);
+    }
+  }
+
   .border-transparent {
     border-color: #0000;
   }
@@ -1251,6 +1276,10 @@
 
   .bg-green-500 {
     background-color: var(--color-green-500);
+  }
+
+  .bg-green-600 {
+    background-color: var(--color-green-600);
   }
 
   .bg-orange-500 {
@@ -1996,6 +2025,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-green-700:hover {
+      background-color: var(--color-green-700);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-orange-600:hover {
       background-color: var(--color-orange-600);
     }
@@ -2230,6 +2265,12 @@
   @media (min-width: 48rem) {
     .md\:justify-end {
       justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:justify-start {
+      justify-content: flex-start;
     }
   }
 

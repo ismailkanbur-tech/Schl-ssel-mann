@@ -1,0 +1,301 @@
+[00:00:01.227] Server  LOG      ✓ Ready in 895ms
+[00:00:13.418] Server  WARN     ⚠ Cross origin request detected from 192.168.178.53 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:18.925] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:18.926] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:18.929] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:18.945] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:18.946] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:18.949] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:24.367] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:24.368] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:24.369] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:24.382] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:24.383] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:24.384] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:02:05.295] Server  LOG      ✓ Compiled in 36ms
+[00:02:09.972] Browser ERROR   ./src/app/ratgeber/[slug]/page.tsx:70:31
+Ecmascript file had an error
+  68 | // 3. HAUPTKOMPONENTE (Server Component)
+  69 | // --------------------------------------------------------------------------------
+> 70 | export default async function ArticlePage({ params }: { params: ArticleParams }) {
+     |                               ^^^^^^^^^^^
+  71 |     
+  72 |     // params.slug doğrudan kullanılıyor (Promise hatasını önler)
+  73 |     const article = getArticleContentBySlug(params.slug);
+
+the name `ArticlePage` is defined multiple times
+[00:02:09.972] Browser ERROR   ./src/app/ratgeber/[slug]/page.tsx:70:1
+Ecmascript file had an error
+   68 | // 3. HAUPTKOMPONENTE (Server Component)
+   69 | // --------------------------------------------------------------------------------
+>  70 | export default async function ArticlePage({ params }: { params: ArticleParams }) {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |     
+      | ^^^^
+>  72 |     // params.slug doğrudan kullanılıyor (Promise hatasını önler)
+      | ^^^^
+>  73 |     const article = getArticleContentBySlug(params.slug);
+      | ^^^^
+>  74 |
+      | ^^^^
+>  75 |     if (!article) {
+      | ^^^^
+>  76 |         notFound(); // Bileşen içinde 404 döndürmek için
+      | ^^^^
+>  77 |     }
+      | ^^^^
+>  78 |     
+      | ^^^^
+>  79 |     const contactNumber = '0177 3977646';
+      | ^^^^
+>  80 |     
+      | ^^^^
+>  81 |     // Schema Markup'lar... (Önceki haliyle aynı, hatasız)
+      | ^^^^
+>  82 |     const breadcrumbSchema = {
+      | ^^^^
+>  83 |         "@context": "https://schema.org",
+      | ^^^^
+>  84 |         "@type": "BreadcrumbList",
+      | ^^^^
+>  85 |         "itemListElement": [
+      | ^^^^
+>  86 |             { "@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE_URL },
+      | ^^^^
+>  87 |             { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": `${BASE_URL}/ratgeber` },
+      | ^^^^
+>  88 |             { "@type": "ListItem", "position": 3, "name": article.title }
+      | ^^^^
+>  89 |         ]
+      | ^^^^
+>  90 |     };
+      | ^^^^
+>  91 |
+      | ^^^^
+>  92 |     const articleSchema = {
+      | ^^^^
+>  93 |         "@context": "https://schema.org",
+      | ^^^^
+>  94 |         "@type": "Article",
+      | ^^^^
+>  95 |         "headline": article.title,
+      | ^^^^
+>  96 |         "description": article.description,
+      | ^^^^
+>  97 |         "image": {
+      | ^^^^
+>  98 |             "@type": "ImageObject",
+      | ^^^^
+>  99 |             "url": article.imageUrl,
+      | ^^^^
+> 100 |             "width": 1200, 
+      | ^^^^
+> 101 |             "height": 675, 
+      | ^^^^
+> 102 |         },
+      | ^^^^
+> 103 |         "author": { "@type": "Organization", "name": "Schlüsselmann" },
+      | ^^^^
+> 104 |         "publisher": {
+      | ^^^^
+> 105 |             "@type": "Organization",
+      | ^^^^
+> 106 |             "name": "Schlüsselmann",
+      | ^^^^
+> 107 |             "logo": { "@type": "ImageObject", "url": `${BASE_URL}/logo.png`, "width": 600, "height": 60 }
+      | ^^^^
+> 108 |         },
+      | ^^^^
+> 109 |         "datePublished": article.datePublished,
+      | ^^^^
+> 110 |         "dateModified": article.dateModified,
+      | ^^^^
+> 111 |         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BASE_URL}/ratgeber/${article.slug}` }
+      | ^^^^
+> 112 |     };
+      | ^^^^
+> 113 |
+      | ^^^^
+> 114 |     return (
+      | ^^^^
+> 115 |         <main className="container mx-auto px-4 py-12 max-w-4xl">
+      | ^^^^
+> 116 |             
+      | ^^^^
+> 117 |             {/* Schema Markup'lar */}
+      | ^^^^
+> 118 |             <script
+      | ^^^^
+> 119 |                 type="application/ld+json"
+      | ^^^^
+> 120 |                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      | ^^^^
+> 121 |             />
+      | ^^^^
+> 122 |             <script
+      | ^^^^
+> 123 |                 type="application/ld+json"
+      | ^^^^
+> 124 |                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      | ^^^^
+> 125 |             />
+      | ^^^^
+> 126 |
+      | ^^^^
+> 127 |             {/* Breadcrumb Görseli */}
+      | ^^^^
+> 128 |             <nav className="text-sm font-medium text-gray-500 mb-6" aria-label="Breadcrumb">
+      | ^^^^
+> 129 |                 <ol className="list-none p-0 inline-flex items-center space-x-2">
+      | ^^^^
+> 130 |                     <li className="flex items-center">
+      | ^^^^
+> 131 |                         <Link href="/" className="hover:text-gray-700">Startseite</Link>
+      | ^^^^
+> 132 |                     </li>
+      | ^^^^
+> 133 |                     <li className="flex items-center">
+      | ^^^^
+> 134 |                         <ChevronRightIcon className="h-4 w-4 text-gray-400 mx-2" />
+      | ^^^^
+> 135 |                         <Link href="/ratgeber" className="hover:text-gray-700">Ratgeber</Link>
+      | ^^^^
+> 136 |                     </li>
+      | ^^^^
+> 137 |                     <li className="flex items-center text-gray-900 truncate max-w-xs">
+      | ^^^^
+> 138 |                         <ChevronRightIcon className="h-4 w-4 text-gray-400 mx-2" />
+      | ^^^^
+> 139 |                         <span className="font-semibold">{article.title}</span>
+      | ^^^^
+> 140 |                     </li>
+      | ^^^^
+> 141 |                 </ol>
+      | ^^^^
+> 142 |             </nav>
+      | ^^^^
+> 143 |
+      | ^^^^
+> 144 |             {/* Başlık ve Meta Bilgileri */}
+      | ^^^^
+> 145 |             <header className="mb-8">
+      | ^^^^
+> 146 |                 <h1 className="text-4xl font-extrabold text-gray-900 mb-4 leading-tight border-b pb-3">{article.title}</h1>
+      | ^^^^
+> 147 |                 <div className="flex items-center text-sm text-gray-600 space-x-4">
+      | ^^^^
+> 148 |                     <div className="flex items-center">
+      | ^^^^
+> 149 |                         <BookOpenIcon className="h-5 w-5 mr-1 text-blue-600" />
+      | ^^^^
+> 150 |                         <span>Experten-Wissen</span>
+      | ^^^^
+> 151 |                     </div>
+      | ^^^^
+> 152 |                     <div className="flex items-center">
+      | ^^^^
+> 153 |                         <ClockIcon className="h-5 w-5 mr-1 text-blue-600" />
+      | ^^^^
+> 154 |                         <span>{article.readTime}</span>
+      | ^^^^
+> 155 |                     </div>
+      | ^^^^
+> 156 |                 </div>
+      | ^^^^
+> 157 |             </header>
+      | ^^^^
+> 158 |             
+      | ^^^^
+> 159 |             {/* Güvenlik Notu ve Bilgi Kutusu */}
+      | ^^^^
+> 160 |             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-8 text-sm text-yellow-800">
+      | ^^^^
+> 161 |                 <strong>Wichtig:</strong> Bei akuten Notfällen rufen Sie uns direkt unter {process.env.NEXT_PUBLIC_GLOBAL_TELEFON || '0177 3977646'} an. Dieser Artikel dient nur der Information.
+      | ^^^^
+> 162 |             </div>
+      | ^^^^
+> 163 |
+      | ^^^^
+> 164 |             {/* Makale içeriği */}
+      | ^^^^
+> 165 |             <article 
+      | ^^^^
+> 166 |                 className="prose prose-lg max-w-none text-gray-700 leading-relaxed" 
+      | ^^^^
+> 167 |                 dangerouslySetInnerHTML={{ __html: article.content }} 
+      | ^^^^
+> 168 |             />
+      | ^^^^
+> 169 |
+      | ^^^^
+> 170 |             {/* Acil Durum CTA */}
+      | ^^^^
+> 171 |             <div className="mt-12 p-8 bg-blue-50 border-l-4 border-blue-500 rounded-lg shadow-md text-center">
+      | ^^^^
+> 172 |                 <h3 className="text-xl font-bold text-gray-800 mb-3">Im Notfall sofort Hilfe!</h3>
+      | ^^^^
+> 173 |                 <p className="text-gray-600 mb-4">Brauchen Sie jetzt einen Schlüsseldienst? Rufen Sie uns Tag und Nacht an.</p>
+      | ^^^^
+> 174 |                 <a 
+      | ^^^^
+> 175 |                     href={`tel:${contactNumber.replace(/\s/g, '')}`} 
+      | ^^^^
+> 176 |                     className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
+      | ^^^^
+> 177 |                 >
+      | ^^^^
+> 178 |                     <PhoneIcon className="h-5 w-5 mr-2" />
+      | ^^^^
+> 179 |                     24/7 Notruf: {contactNumber}
+      | ^^^^
+> 180 |                 </a>
+      | ^^^^
+> 181 |             </div>
+      | ^^^^
+> 182 |
+      | ^^^^
+> 183 |             {/* Diğer linkler */}
+      | ^^^^
+> 184 |             <div className="mt-12 text-center">
+      | ^^^^
+> 185 |                 <Link href="/ratgeber" className="text-blue-600 font-semibold hover:underline">
+      | ^^^^
+> 186 |                     &larr; Zurück zur Ratgeber-Übersicht
+      | ^^^^
+> 187 |                 </Link>
+      | ^^^^
+> 188 |             </div>
+      | ^^^^
+> 189 |         </main>
+      | ^^^^
+> 190 |     );
+      | ^^^^
+> 191 | }
+      | ^^
+
+the name `default` is exported multiple times
+[00:07:04.124] Server  LOG      ✓ Compiled in 36ms
+[00:07:07.607] Server  LOG      ✓ Compiled in 30ms
+[00:08:30.561] Server  LOG      ✓ Compiled in 25ms
+[00:08:35.092] Server  LOG      ✓ Compiled in 29ms
+[00:08:55.225] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:55.226] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:55.226] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:08:55.248] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:55.249] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:55.251] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:08:59.110] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:59.110] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:59.111] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:08:59.123] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:59.124] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:08:59.125] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:09:02.209] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:09:02.210] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:09:02.210] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:09:02.223] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\node_modules_473cc24e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:09:02.223] Server  ERROR   C:\Users\Ismail\temp-web\.next\dev\server\chunks\ssr\[root-of-the-server]__b9969caa._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:09:02.225] Server  WARN    Error: Route "/ratgeber/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:15:43.630] Server  LOG      ✓ Compiled in 31ms
+[00:15:48.155] Server  LOG      ✓ Compiled in 27ms

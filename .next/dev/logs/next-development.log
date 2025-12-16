@@ -1,19 +1,2 @@
-[00:00:01.179] Server  LOG      ✓ Ready in 839ms
-[00:01:01.425] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-
-Check the render method of `HomePage`.
-[00:01:02.219] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:02:39.423] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-
-Check the render method of `HomePage`.
-[00:02:41.731] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:00.670] Server  LOG      ✓ Compiled in 11ms
-[00:14:04.293] Server  LOG      ✓ Compiled in 67ms
-[00:15:22.264] Server  LOG      ✓ Compiled in 6ms
-[00:15:25.001] Server  LOG      ✓ Compiled in 62ms
-[00:16:10.425] Server  LOG      ✓ Compiled in 8ms
-[00:16:11.925] Server  LOG      ✓ Compiled in 60ms
-[00:16:12.983] Server  LOG      ✓ Compiled in 11ms
-[00:16:14.557] Server  LOG      ✓ Compiled in 101ms
-[00:16:42.075] Server  LOG      ✓ Compiled in 104ms
-[00:17:11.859] Server  LOG      ✓ Compiled in 75ms
+[00:00:01.155] Server  LOG      ✓ Ready in 829ms
+[00:00:33.144] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/ka-service-region-map.png" "received" null

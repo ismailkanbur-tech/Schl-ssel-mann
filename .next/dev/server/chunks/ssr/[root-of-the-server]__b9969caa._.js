@@ -181,7 +181,7 @@ function getAllArticlesContent() {
 "[project]/src/app/ratgeber/[slug]/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/app/ratgeber/[slug]/page.tsx - Makale Detay Sayfası
+// src/app/ratgeber/[slug]/page.tsx - Makale Detay Sayfası (ikon çözümü)
 __turbopack_context__.s([
     "default",
     ()=>ArticlePage,
@@ -214,7 +214,7 @@ async function generateStaticParams() {
     return await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$articles$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getAllArticleSlugs"])();
 }
 async function generateMetadata({ params }) {
-    const { slug } = await params; // ✅ unwrap
+    const { slug } = await params;
     const article = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$articles$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getArticleContentBySlug"])(slug);
     if (!article) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
@@ -228,7 +228,7 @@ async function generateMetadata({ params }) {
     };
 }
 async function ArticlePage({ params }) {
-    const { slug } = await params; // ✅ unwrap
+    const { slug } = await params;
     const article = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$articles$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getArticleContentBySlug"])(slug);
     if (!article) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
@@ -262,12 +262,6 @@ async function ArticlePage({ params }) {
         "@type": "Article",
         "headline": article.title,
         "description": article.description,
-        "image": {
-            "@type": "ImageObject",
-            "url": article.imageUrl,
-            "width": 1200,
-            "height": 675
-        },
         "author": {
             "@type": "Organization",
             "name": "Schlüsselmann"
@@ -299,7 +293,7 @@ async function ArticlePage({ params }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 90,
+                lineNumber: 84,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -309,7 +303,7 @@ async function ArticlePage({ params }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 91,
+                lineNumber: 85,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -326,12 +320,12 @@ async function ArticlePage({ params }) {
                                 children: "Startseite"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                lineNumber: 97,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                            lineNumber: 96,
+                            lineNumber: 90,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -341,7 +335,7 @@ async function ArticlePage({ params }) {
                                     className: "h-4 w-4 text-gray-400 mx-2"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 94,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -350,13 +344,13 @@ async function ArticlePage({ params }) {
                                     children: "Ratgeber"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 95,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                            lineNumber: 99,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -366,7 +360,7 @@ async function ArticlePage({ params }) {
                                     className: "h-4 w-4 text-gray-400 mx-2"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -374,24 +368,24 @@ async function ArticlePage({ params }) {
                                     children: article.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                            lineNumber: 103,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                    lineNumber: 95,
+                    lineNumber: 89,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 94,
+                lineNumber: 88,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -402,7 +396,7 @@ async function ArticlePage({ params }) {
                         children: article.title
                     }, void 0, false, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 112,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -415,20 +409,20 @@ async function ArticlePage({ params }) {
                                         className: "h-5 w-5 mr-1 text-blue-600"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 109,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Experten-Wissen"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 110,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                lineNumber: 114,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -438,32 +432,32 @@ async function ArticlePage({ params }) {
                                         className: "h-5 w-5 mr-1 text-blue-600"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: article.readTime
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                lineNumber: 118,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 113,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 111,
+                lineNumber: 105,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -473,7 +467,7 @@ async function ArticlePage({ params }) {
                         children: "Wichtig:"
                     }, void 0, false, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 127,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this),
                     " Bei akuten Notfällen rufen Sie uns direkt unter ",
@@ -482,7 +476,7 @@ async function ArticlePage({ params }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 126,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -492,7 +486,7 @@ async function ArticlePage({ params }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 131,
+                lineNumber: 125,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,7 +497,7 @@ async function ArticlePage({ params }) {
                         children: "Im Notfall sofort Hilfe!"
                     }, void 0, false, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 138,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -511,7 +505,7 @@ async function ArticlePage({ params }) {
                         children: "Brauchen Sie jetzt einen Schlüsseldienst? Rufen Sie uns Tag und Nacht an."
                     }, void 0, false, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 139,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -522,7 +516,7 @@ async function ArticlePage({ params }) {
                                 className: "h-5 w-5 mr-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                                lineNumber: 144,
+                                lineNumber: 138,
                                 columnNumber: 11
                             }, this),
                             "24/7 Notruf: ",
@@ -530,13 +524,13 @@ async function ArticlePage({ params }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 134,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 137,
+                lineNumber: 131,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -547,18 +541,18 @@ async function ArticlePage({ params }) {
                     children: "← Zurück zur Ratgeber-Übersicht"
                 }, void 0, false, {
                     fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                    lineNumber: 151,
+                    lineNumber: 145,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-                lineNumber: 150,
+                lineNumber: 144,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/ratgeber/[slug]/page.tsx",
-        lineNumber: 88,
+        lineNumber: 82,
         columnNumber: 5
     }, this);
 }

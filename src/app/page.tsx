@@ -120,38 +120,46 @@ export default function HomePage() {
                 }}
             />
 
+        
+
+
                 {/* Yeni Hero Section: Güçlü Kontrast ve Aciliyet Hissi */}
-                <header className="relative mb-16 overflow-hidden rounded-3xl p-6 md:p-16 lg:p-20 bg-gray-900 text-white shadow-2xl border border-gray-700"> {/* ✅ Mobil Padding p-6'ya düşürüldü */}
+                <header className="relative mb-16 overflow-hidden rounded-3xl p-6 md:p-16 lg:p-20 bg-gray-900 text-white shadow-2xl border border-gray-700"> 
                     
                     {/* SVG yok, basit bir gradient veya pattern kullanıldı */}
                     <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-indigo-800 to-blue-900"></div>
                     
                     <div className="relative z-10 text-center max-w-4xl mx-auto">
                         
-                        {/* HIZLI ANFAHRT + PUAN - Mobil Uyumu İçin Flex-Wrap ve Pading Düzenlemesi */}
-                        <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-medium mb-6 bg-yellow-400/90 backdrop-blur-sm rounded-full p-1 md:p-2 text-gray-900 max-w-full mx-auto"> {/* ✅ flex-wrap ve gap-2 eklendi, p-1 kullanıldı */}
+                        {/* HIZLI ANFAHRT + PUAN - Stabilize Edilmiş */}
+                        <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-medium mb-6 bg-yellow-400/90 backdrop-blur-sm rounded-full p-1 md:p-2 text-gray-900 max-w-full mx-auto"> 
                             <span className="bg-white px-3 py-1 rounded-full flex items-center gap-2 font-black flex-shrink-0">
                                 <ClockIcon className="h-4 w-4 text-red-600" /> 24/7 Notdienst
                             </span>
-                            {/* YILDIZ PUANI - Mobilde font küçültüldü */}
+                            {/* YILDIZ PUANI */}
                             <span className="flex items-center font-semibold text-xs md:text-sm flex-shrink-0 px-2">
                                 <StarIcon className="h-4 w-4 fill-gray-900 mr-1" />
-                                {AVERAGE_RATING} / 5.0 ({REVIEW_COUNT} Bewertungen)
+                                {/* Değişkenlerinizin doğru olduğundan emin olun */}
+                                {AVERAGE_RATING} / 5.0 ({REVIEW_COUNT} Bewertungen) 
                             </span>
                         </div>
                         
-                        {/* Hauptüberschrift - Mobilde Font Boyutu Küçültüldü */}
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 leading-snug tracking-tight"> {/* ✅ text-4xl yerine text-3xl, sm:text-4xl eklendi */}
-                            Ihr <span className="text-yellow-400">Schlüsseldienst</span> 
+                        {/* Hauptüberschrift - Schlüsseldienst Taşmasını Engelleyen break-words Eklendi */}
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 leading-snug tracking-tight">
+                            Ihr 
+                            <span className="text-yellow-400 break-words"> {/* ✅ Taşan kelimeye break-words eklendi */}
+                                Schlüsseldienst 
+                            </span> 
                             <br className="hidden md:inline" /> 
                             in München, Dachau & Freising
                         </h1>
                         
-                        <p className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light"> {/* ✅ text-lg yerine text-base kullanıldı */}
+                        {/* Alt Metin */}
+                        <p className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light"> 
                             <strong className="font-semibold text-white">„15–30 Min. Schlüsselhilfe sofort!“</strong> Tür & Auto!
                         </p>
                         
-                        {/* Ana CTA (Kırmızı ve Acil) - Mobil Metin Kısaltıldı */}
+                        {/* Ana CTA (Kırmızı ve Acil) - Mobilde dikey hizalama ile metin taşması önlendi */}
                         <a
                             href={`tel:${defaultTelefon.replace(/-/g, '')}`}
                             className="inline-flex flex-col sm:flex-row items-center justify-center px-6 py-3 sm:px-10 sm:py-4 text-lg md:text-xl bg-red-600 text-white font-black rounded-full shadow-2xl transition duration-300 hover:bg-red-700 hover:scale-[1.03] transform"
@@ -160,16 +168,16 @@ export default function HomePage() {
                                 <PhoneIcon className="h-6 w-6 mr-2" /> Jetzt Sofort Anrufen:
                             </span>
                             <span className="text-xl sm:ml-2 tracking-wider">
-                                {defaultTelefon} {/* Telefon Numarası Alt Satıra Alındı */}
+                                {defaultTelefon} 
                             </span>
                         </a>
 
-                        {/* Fiyat ve Hızlı Bilgi - Mobil Uyumlu Gap */}
-                        <div className="flex flex-wrap justify-center gap-4 mt-8"> {/* ✅ gap-6 yerine gap-4 kullanıldı */}
-                            <span className="text-yellow-400 font-bold text-base border-b-2 border-red-600"> {/* ✅ text-lg yerine text-base */}
+                        {/* Fiyat ve Hızlı Bilgi - Stabilize Edilmiş */}
+                        <div className="flex flex-wrap justify-center gap-4 mt-8"> 
+                            <span className="text-yellow-400 font-bold text-base border-b-2 border-red-600"> 
                                 {defaultPrice} Türöffnung Festpreis
                             </span>
-                            <span className="text-gray-400 text-base flex items-center gap-2"> {/* ✅ text-lg yerine text-base */}
+                            <span className="text-gray-400 text-base flex items-center gap-2"> 
                                 <ShieldCheckIcon className="h-5 w-5" /> 100% Transparent
                             </span>
                         </div>

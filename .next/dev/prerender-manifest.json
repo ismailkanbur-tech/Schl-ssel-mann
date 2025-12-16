@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/muenchen":{},"/dachau":{},"/freising":{},"/fuerstenfeldbruck":{},"/muenchen/muenchen-city":{},"/muenchen/pasing":{},"/muenchen/sendling":{},"/muenchen/schwabing":{},"/muenchen/haidhausen":{},"/muenchen/neuhausen":{},"/muenchen/garching":{},"/muenchen/unterfoehring":{},"/muenchen/frankfurt-strasse":{},"/muenchen/moosach":{},"/muenchen/ramersdorf":{},"/muenchen/hasenbergl":{},"/dachau/dachau-stadt":{},"/dachau/markt-indersdorf":{},"/dachau/karlsfeld":{},"/dachau/altomuenster":{},"/dachau/bergkirchen":{},"/dachau/schwabhausen":{},"/dachau/pauli-heim":{},"/dachau/puchheim":{},"/dachau/olching":{},"/dachau/groebenzell":{},"/dachau/hebertshausen":{},"/dachau/rohrbach":{},"/dachau/weichs":{},"/dachau/vierkirchen":{},"/freising/freising-stadt":{},"/freising/moosburg":{},"/freising/hallbergmoos":{},"/freising/neufahrn":{},"/fuerstenfeldbruck/fuerstenfeldbruck-stadt":{},"/fuerstenfeldbruck/olching":{},"/fuerstenfeldbruck/groebenzell":{},"/fuerstenfeldbruck/maisach":{}},"dynamicRoutes":{"/[citySlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[citySlug]/[townSlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]/[townSlug]","routeRegex":"^\\/([^/]+?)\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a22964434b38de16fd904306f8dcbb5c","previewModeSigningKey":"1d441e872bb92746449dc7cd4f3ed5f2532a703d4d20678b576f3ea04245e2af","previewModeEncryptionKey":"d4fb21150160c2de39715f05e0e879a4e3a24aca427c118fb5f3533fbf331452"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "64350384ffb6423b7dcc97d08abf29a3",
+    "previewModeSigningKey": "c848cd795eafe26527f178dda5396b53d9244cbea49b75c3f58914f90516215d",
+    "previewModeEncryptionKey": "de4e5ce675f194c25be7aa0f150b3761007d8be8ed70e73457c266854128d65d"
+  }
+}

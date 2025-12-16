@@ -7,12 +7,16 @@ import {
     CurrencyEuroIcon, 
     BoltIcon,
     PhoneIcon, 
+    SparklesIcon, // YENİ: Gravür için
+    TruckIcon, // YENİ: Otomobil için
+    TagIcon, // YENİ: Haustiermarken (etiket) için
+    CheckCircleIcon, // YENİ: Özellikler için
 } from '@heroicons/react/24/outline'; 
 import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'Unsere Leistungen | Schlüsseldienst und Auto Schlüssel Service',
-    description: 'Umfassende Leistungen vom Schlüsselmann: Professionelle Türöffnung, Auto Schlüssel nachmachen, Einbruchschutz und 24/7 Notdienst mit Festpreisgarantie in Ihrer Region.',
+    description: 'Umfassende Leistungen vom Schlüsselmann: Professionelle Türöffnung, Auto Schlüssel nachmachen, Einbruchschutz, Gravuren und 24/7 Notdienst mit Festpreisgarantie in Ihrer Region.',
 };
 
 // Hizmet Verileri (Aynı kalıyor)
@@ -72,12 +76,10 @@ const LeistungenPage: React.FC = () => {
                     Unsere Kernkompetenzen im Überblick
                 </h2>
                 
-                {/* Modern 3-sütunlu ızgara */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div 
                             key={index} 
-                            // Flexbox Sınıfları Eklendi: Kartı dikey flex container yapar
                             className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-transparent hover:border-sky-500 transform hover:scale-[1.02] transition duration-500 ease-in-out flex flex-col h-full"
                         >
                             <service.icon className={`h-16 w-16 ${service.color} mb-6`} />
@@ -86,7 +88,6 @@ const LeistungenPage: React.FC = () => {
                                 {service.title}
                             </h3>
                             
-                            {/* Flex-grow sınıfı, bu paragrafın boşluğu doldurarak kartın yüksekliğini eşitlemesini sağlar */}
                             <p className="text-gray-700 mb-6 flex-grow">
                                 {service.description}
                             </p>
@@ -94,17 +95,15 @@ const LeistungenPage: React.FC = () => {
                             <ul className="space-y-2 mb-6">
                                 {service.features.map((feature, i) => (
                                     <li key={i} className="flex items-start text-gray-600">
-                                        {/* İkonu ilgili hizmet rengiyle değiştirdim. */}
-                                        <LockOpenIcon className={`h-4 w-4 mr-2 mt-1 ${service.color} flex-shrink-0`} /> 
+                                        <CheckCircleIcon className={`h-4 w-4 mr-2 mt-1 ${service.color} flex-shrink-0`} /> {/* İkon LockOpenIcon'dan CheckCircleIcon'a değiştirildi */}
                                         <span className="text-sm">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
 
-                            {/* CTA'nın hep en altta kalması garanti edilir */}
                             <Link 
                                 href={`tel:${NOTDIENST_TELEFON}`} 
-                                className={`text-md font-semibold flex items-center ${service.color} hover:text-sky-700 transition mt-auto`} // mt-auto eklenerek en alta itilir
+                                className={`text-md font-semibold flex items-center ${service.color} hover:text-sky-700 transition mt-auto`} 
                             >
                                 <PhoneIcon className="h-5 w-5 mr-2" />
                                 Jetzt Soforthilfe anfordern
@@ -114,7 +113,78 @@ const LeistungenPage: React.FC = () => {
                 </div>
             </section>
             
-            {/* 2. Preisversprechen ve Acil Durum CTA - Daha Dinamik Tasarım */}
+            
+            {/* 3. NEU: Personalisierte Gravurdienste */}
+            <section className="mb-20 bg-gray-50 p-8 rounded-2xl shadow-inner border border-gray-200">
+                <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+                    <SparklesIcon className="h-8 w-8 inline mr-3 text-blue-600" />
+                    Zusatzleistung: Personalisierte Gravuren
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    {/* Gravür Bilgisi */}
+                    <div className="md:col-span-2 bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
+                        <h3 className="text-2xl font-bold text-blue-600 mb-4">Für individuelle Designs und Botschaften</h3>
+                        <p className="text-gray-700 mb-4">
+                            KA Service bietet einen Gravurdienst, um Objekte mit individuellen Designs, Texten oder Mustern zu personalisieren. Durch die Veredelung verschiedener Materialien wie Metall, Glas, Kunststoff oder Leder können Sie Ihren persönlichen Stil oder eine besondere Botschaft zum Ausdruck bringen.
+                        </p>
+                        <div className="flex flex-wrap gap-4 mt-6">
+                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full flex items-center gap-1">Lasergravur</span>
+                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full flex items-center gap-1">CNC-Gravur</span>
+                            <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full flex items-center gap-1">Rotationsgravur</span>
+                        </div>
+                    </div>
+                    
+                    {/* Gravierbare Gegenstände ve Haustiermarken */}
+                    <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-600">
+                        <h3 className="text-xl font-bold text-orange-600 mb-4">Gravierbare Materialien & Objekte</h3>
+                        <ul className="list-disc list-inside space-y-1 text-gray-700">
+                            <li>Aluminium, Edelstahl, Messing, Kupfer</li>
+                            <li>Kunststoff, Acryl, Glas, Leder</li>
+                            <li>Liebesschlösser, Trophäen, Schlüsselanhänger, Namensschilder</li>
+                            <li className="font-bold text-red-600 flex items-center"><TagIcon className="h-5 w-5 mr-2" /> Haustiermarken (NEU)</li> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            
+            {/* 4. NEU: Autoschlüssel Programmierung & Reparatur (Detaylı) */}
+            <section className="mb-20">
+                <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+                    <TruckIcon className="h-8 w-8 inline mr-3 text-red-600" />
+                    Moderne Autoschlüssel Technologie & Service
+                </h2>
+
+                <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-red-600 max-w-5xl mx-auto">
+                    <p className="text-lg text-gray-700 mb-6">
+                        Moderne Schlüssel sind mit fortschrittlicher Technologie ausgestattet. Dazu gehören **Funkfernbedienungen**, **Transponderchips** (Diebstahlschutz) und schlüssellose Systeme. Unsere Fachleute fertigen präzise Kopien an, reparieren und programmieren defekte Fahrzeugschlüssel und Fernbedienungen.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                        <div className="text-lg text-gray-800">
+                            <h3 className="font-bold text-xl text-red-700 mb-2">Unsere Expertise:</h3>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Reparatur defekter Fahrzeugschlüssel</li>
+                                <li>Neuprogrammierung von Transponderchips</li>
+                                <li>Fertigung von präzisen Kopien</li>
+                            </ul>
+                        </div>
+                         <div className="text-lg text-gray-800">
+                            <h3 className="font-bold text-xl text-red-700 mb-2">Technologie im Fokus:</h3>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Funkfernbedienungen (Öffnen/Verriegeln)</li>
+                                <li>Schlüssellose Systeme (Start/Stop)</li>
+                                <li>Diebstahlschutz durch codierte Transponder</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* 5. Preisversprechen ve Acil Durum CTA (Önceki yapı korunmuştur) */}
             <section className="bg-gradient-to-r from-sky-600 to-blue-700 p-10 rounded-2xl text-white text-center shadow-2xl relative overflow-hidden">
                 {/* Arka plan deseni / süsleme */}
                 <div className="absolute inset-0 opacity-10">

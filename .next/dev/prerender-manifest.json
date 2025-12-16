@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ba518d14d9c7394404f9669a88856e77",
-    "previewModeSigningKey": "f5132e5ccd02afeb3773e4eccaac00d93c4a71e09c6bfa311071b4c0abc213b2",
-    "previewModeEncryptionKey": "bed122abbcf394e08fe1be5878a11ece538fe83e42e59e185157d8434a6b9105"
-  }
-}
+{"version":4,"routes":{"/muenchen":{},"/dachau":{},"/freising":{},"/fuerstenfeldbruck":{},"/muenchen/muenchen-city":{},"/muenchen/pasing":{},"/muenchen/sendling":{},"/muenchen/schwabing":{},"/muenchen/haidhausen":{},"/muenchen/neuhausen":{},"/muenchen/garching":{},"/muenchen/unterfoehring":{},"/muenchen/frankfurt-strasse":{},"/muenchen/moosach":{},"/muenchen/ramersdorf":{},"/muenchen/hasenbergl":{},"/dachau/dachau-stadt":{},"/dachau/markt-indersdorf":{},"/dachau/karlsfeld":{},"/dachau/altomuenster":{},"/dachau/bergkirchen":{},"/dachau/schwabhausen":{},"/dachau/pauli-heim":{},"/dachau/puchheim":{},"/dachau/olching":{},"/dachau/groebenzell":{},"/dachau/hebertshausen":{},"/dachau/rohrbach":{},"/dachau/weichs":{},"/dachau/vierkirchen":{},"/freising/freising-stadt":{},"/freising/moosburg":{},"/freising/hallbergmoos":{},"/freising/neufahrn":{},"/fuerstenfeldbruck/fuerstenfeldbruck-stadt":{},"/fuerstenfeldbruck/olching":{},"/fuerstenfeldbruck/groebenzell":{},"/fuerstenfeldbruck/maisach":{}},"dynamicRoutes":{"/[citySlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[citySlug]/[townSlug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/[citySlug]/[townSlug]","routeRegex":"^\\/([^/]+?)\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"fa47287a257357cdad1941a76f0f2761","previewModeSigningKey":"8f9696519555cc6ba02d6bb8ced2a5fe10155ba9a4af9cf7cb8f59e3bb21a12b","previewModeEncryptionKey":"eb3ab5e8a0c40f83611f153c2e72ca6ee80ac68775765eba3e7eb3e8471ac14a"}}

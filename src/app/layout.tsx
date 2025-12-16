@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "Türöffnung 24h",
     "Festpreis Schlüsseldienst",
   ],
-  authors: [{ name: "Ka Service Schlüsseldients" }],
+  authors: [{ name: "Ka Service Schlüsseldienst" }],
   openGraph: {
-    title: "Ka Service Schlüsseldients - Ihr 24/7 Autoschlüsseldienst",
+    title: "Ka Service Schlüsseldienst - Ihr 24/7 Autoschlüsseldienst",
     description:
       "Ihr lokaler Schlüsselnotdienst für München, Dachau und Augsburg. Schnelle Hilfe, transparente Festpreise.",
     url: "https://xn--autoschlsselmann-qzb.de/",
@@ -39,12 +39,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+      <body
+        className={`${inter.className} min-h-screen bg-white text-gray-900 dark:bg-black dark:text-gray-100`}
+      >
         {/* Header (Navbar) */}
         <Header />
 
         {/* Ana İçerik */}
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-1">{children}</main>
 
         {/* Footer (Alt Bilgi) */}
         <Footer />

@@ -45,7 +45,9 @@
       "path": "/_next/image",
       "loader": "default",
       "loaderFile": "",
-      "domains": [],
+      "domains": [
+        "deinedomain.de"
+      ],
       "disableStaticImages": false,
       "minimumCacheTTL": 14400,
       "formats": [
@@ -89,7 +91,9 @@
       "keepAlive": true
     },
     "logging": {},
-    "compiler": {},
+    "compiler": {
+      "removeConsole": true
+    },
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
     "modularizeImports": {
@@ -167,7 +171,7 @@
       "imgOptSkipMetadata": null,
       "isrFlushToDisk": true,
       "workerThreads": false,
-      "optimizeCss": false,
+      "optimizeCss": true,
       "nextScriptWorkers": false,
       "scrollRestoration": false,
       "externalDir": false,
@@ -207,6 +211,8 @@
       "hideLogsAfterAbort": false,
       "mcpServer": true,
       "optimizePackageImports": [
+        "react",
+        "next/font",
         "lucide-react",
         "date-fns",
         "lodash-es",
@@ -311,7 +317,8 @@
     ".next\\BUILD_ID",
     ".next\\server\\next-font-manifest.js",
     ".next\\server\\next-font-manifest.json",
-    ".next\\required-server-files.json"
+    ".next\\required-server-files.json",
+    ".next\\static\\chunks\\832c708abf5a7171.css"
   ],
   "ignore": []
 }

@@ -23,7 +23,9 @@
     "path": "/_next/image",
     "loader": "default",
     "loaderFile": "",
-    "domains": [],
+    "domains": [
+      "deinedomain.de"
+    ],
     "disableStaticImages": false,
     "minimumCacheTTL": 14400,
     "formats": [
